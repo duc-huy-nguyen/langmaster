@@ -40,7 +40,6 @@ h5 {
 /* Navbar */
 .navbar-custom {
   background-color: #ffffff;
-  box-shadow: 0px 4px 16px 0px rgba(219, 31, 31, 0.11);
   height: 72px;
   padding: 0;
 }
@@ -92,6 +91,18 @@ h5 {
   color: #db1f1f !important;
 }
 
+.dropdown-menu {
+  display: none !important;
+}
+
+.nav-item:hover > .dropdown-menu {
+  display: flex !important;
+}
+
+.nav-item:not(:hover) > .dropdown-menu {
+  display: none !important;
+}
+
 .navbar-actions {
   margin-left: auto;
 }
@@ -105,7 +116,13 @@ h5 {
 .icon-down {
   width: 11.39px;
   height: 6.51px;
-  margin-left: 8px;
+  margin-left: 10px;
+  filter: brightness(0);
+  transition: filter 0.2s ease;
+}
+
+.nav-link-custom:hover .icon-down {
+  filter: brightness(0) saturate(100%) invert(21%) sepia(75%) saturate(4295%) hue-rotate(347deg) brightness(89%) contrast(89%);
 }
 
 .btn-search {
@@ -136,23 +153,94 @@ h5 {
   border-radius: 8px;
   box-shadow: 0px 4px 16px 0px rgba(219, 31, 31, 0.15);
   padding: 8px 0;
-  margin-top: 8px;
+  margin-top: 16px;
+  left: 50% !important;
+  transform: translateX(-50%);
+  top: 100% !important;
+}
+
+.dropdown-menu::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -16px;
+  height: 16px;
+  background: transparent;
+}
+
+/* New multi-column dropdown menu */
+.dropdown-menu-columns {
+  display: flex;
+  padding: 32px 40px !important;
+  width: 876px;
+  gap: 48px;
+  background: #ffffffec;
+}
+
+.course-column {
+  flex: 1;
+}
+
+.course-column .dropdown-header {
+  border-bottom: 1px dashed #db1f1f;
+  padding-bottom: 8px;
+  margin-bottom: 16px;
+}
+
+.dropdown-header {
+  font-family: "SVN-Gilroy", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.05;
+  color: #db1f1f;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  padding: 0;
+  list-style: none;
 }
 
 .dropdown-item {
   font-family: "SVN-Gilroy", sans-serif;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 14px;
   color: #252525;
-  padding: 8px 24px;
+  padding: 8px 0;
   transition: all 0.2s ease;
+  white-space: nowrap;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: auto;
+  margin-right: 24px;
 }
 
 .dropdown-item:hover,
 .dropdown-item:focus {
-  background-color: rgba(219, 31, 31, 0.05);
   color: #db1f1f;
+  background: transparent;
 }
+
+.dropdown-item:hover:after,
+.dropdown-item:focus:after {
+  content: '➔';
+  position: relative;
+  color: #db1f1f;
+  font-size: 14px;
+  line-height: 1;
+  display: inline-block;
+  margin-top: -1px;
+}
+
+/* Arrow icon rotation */
+.icon-down {
+  width: 12px;
+  height: 7px;
+  transition: transform 0.2s ease;
+}
+
+/* Remove arrow rotation */
 
 /* Mobile navbar toggler */
 .navbar-toggler {
@@ -275,10 +363,11 @@ h5 {
 
 .hero-avatar-img {
   width: 354px;
-  height: 454px;
+  height: 580px;
   object-fit: cover;
   position: relative;
   z-index: 3;
+  right: 26px;
 }
 
 .hero-decorations {
@@ -679,7 +768,7 @@ h5 {
 .course-types-grid {
   display: flex;
   flex-direction: column;
-  gap: 0;
+  gap: 20px;
 }
 
 .course-type-card {

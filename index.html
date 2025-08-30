@@ -34,7 +34,6 @@
             alt="Langmaster"
             class="navbar-brand-logo me-2"
           />
-          <span class="navbar-brand-text">Langmaster</span>
         </a>
 
         <button
@@ -52,7 +51,13 @@
         <div class="collapse navbar-collapse" id="mainNavbar">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-center">
             <li class="nav-item">
-              <a class="nav-link nav-link-custom" href="#">Giới thiệu</a>
+              <a class="nav-link nav-link-custom" href="#">Giới thiệu 
+                <img
+                  src="assets/images/ic-arrow-down.svg"
+                  alt="Open"
+                  class="icon-down ms-1"
+                />
+              </a>
             </li>
             <li class="nav-item dropdown">
               <a
@@ -70,43 +75,91 @@
                   class="icon-down ms-1"
                 />
               </a>
-              <ul class="dropdown-menu" aria-labelledby="coursesDropdown">
-                <li>
-                  <a class="dropdown-item" href="#"
-                    >Khóa tiếng Anh giao tiếp online</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#"
-                    >Khóa học IELTS Foundation 3.0</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#"
-                    >Khóa tiếng Anh giao tiếp online 1 kèm 1</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">Khóa học IELTS 5.0</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">Khóa học IELTS 6.0</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">Khóa học IELTS 6.5</a>
-                </li>
+              <ul class="dropdown-menu dropdown-menu-columns" aria-labelledby="coursesDropdown">
+                <div class="course-column">
+                  <li class="dropdown-header">Khóa học tiếng Anh giao tiếp</li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >Khóa tiếng Anh giao tiếp online</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >Khóa tiếng Anh giao tiếp online 1 kèm 1</a
+                    >
+                  </li>
+                </div>
+
+                <div class="course-column">
+                  <li class="dropdown-header">Khóa học IELTS</li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >Khóa học IELTS Foundation 3.0</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >Khóa học Pre IELTS 4.0</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >Khóa học IELTS 5.0</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >Khóa học IELTS 6.0</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >Khóa học IELTS 6.5</a
+                    >
+                  </li>
+                </div>
+
+                <div class="course-column">
+                  <li class="dropdown-header">Khóa học chuyên biệt</li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >Khóa học tiếng Anh trẻ em</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >Khóa học tiếng Anh doanh nghiệp</a
+                    >
+                  </li>
+                </div>
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link nav-link-custom" href="#">Thư viện</a>
+              <a class="nav-link nav-link-custom" href="#">Cảm nhận học viên</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-custom" href="#">Test miễn phí</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link nav-link-custom d-flex align-items-center"
+                href="#"
+                id="coursesDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Thư viện
+                <img
+                  src="assets/images/ic-arrow-down.svg"
+                  alt="Open"
+                  class="icon-down ms-1"
+                />
+              </a>
             </li>
           </ul>
 
           <div class="d-flex align-items-center navbar-actions">
-            <a href="#" class="nav-link nav-link-custom me-3"
-              >Cảm nhận học viên</a
-            >
-            <a href="#" class="nav-link nav-link-custom me-3">Test miễn phí</a>
             <button
               class="btn btn-search d-flex align-items-center me-3"
               type="button"
@@ -540,9 +593,9 @@
                     data-bs-target="#collapseOne"
                   >
                     <span class="accordion-icon">1</span>
-                    <h4 class="accordion-text">
+                    <h5 class="accordion-text">
                       16+ năm kinh nghiệm, 800.000+ học viên trên toàn cầu
-                    </h4>
+                    </h5>
                   </button>
                 </h2>
                 <div
@@ -570,9 +623,9 @@
                     data-bs-target="#collapseTwo"
                   >
                     <span class="accordion-icon">2</span>
-                    <h4 class="accordion-text">
+                    <h5 class="accordion-text">
                       Lộ trình học chuẩn quốc tế, bám sát nhu cầu học viên
-                    </h4>
+                    </h5>
                   </button>
                 </h2>
                 <div
@@ -595,9 +648,9 @@
                     data-bs-target="#collapseThree"
                   >
                     <span class="accordion-icon">3</span>
-                    <h4 class="accordion-text">
+                    <h5 class="accordion-text">
                       Cam kết đầu ra chuẩn CEFR (hoặc IELTS 6.5+)
-                    </h4>
+                    </h5>
                   </button>
                 </h2>
                 <div
@@ -620,9 +673,9 @@
                     data-bs-target="#collapseFour"
                   >
                     <span class="accordion-icon">4</span>
-                    <h4 class="accordion-text">
+                    <h5 class="accordion-text">
                       100% giáo viên chuẩn Quốc tế, đào tạo 5 bước khắt khe
-                    </h4>
+                    </h5>
                   </button>
                 </h2>
                 <div
@@ -657,9 +710,9 @@
                     data-bs-target="#collapseFive"
                   >
                     <span class="accordion-icon">5</span>
-                    <h4 class="accordion-text">
+                    <h5 class="accordion-text">
                       Phương pháp học linh hoạt, kết hợp trực tuyến và trực tiếp
-                    </h4>
+                    </h5>
                   </button>
                 </h2>
                 <div
@@ -682,9 +735,9 @@
                     data-bs-target="#collapseSix"
                   >
                     <span class="accordion-icon">6</span>
-                    <h4 class="accordion-text">
+                    <h5 class="accordion-text">
                       Ứng dụng công nghệ AI và học liệu số hiện đại
-                    </h4>
+                    </h5>
                   </button>
                 </h2>
                 <div
@@ -707,9 +760,9 @@
                     data-bs-target="#collapseSeven"
                   >
                     <span class="accordion-icon">7</span>
-                    <h4 class="accordion-text">
+                    <h5 class="accordion-text">
                       Cộng đồng học viên rộng lớn, hỗ trợ 24/7
-                    </h4>
+                    </h5>
                   </button>
                 </h2>
                 <div
@@ -732,9 +785,9 @@
                     data-bs-target="#collapseEight"
                   >
                     <span class="accordion-icon">8</span>
-                    <h4 class="accordion-text">
+                    <h5 class="accordion-text">
                       Học phí hợp lý, nhiều ưu đãi linh hoạt
-                    </h4>
+                    </h5>
                   </button>
                 </h2>
                 <div
@@ -1844,13 +1897,6 @@
                 />
                 <div class="play-button">
                   <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
-                    <circle
-                      cx="30"
-                      cy="30"
-                      r="30"
-                      fill="rgba(255, 255, 255, 0.9)"
-                    />
-                    <path d="M24 18L42 30L24 42V18Z" fill="#DB1F1F" />
                   </svg>
                 </div>
               </div>
@@ -1868,13 +1914,6 @@
                 />
                 <div class="play-button">
                   <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
-                    <circle
-                      cx="30"
-                      cy="30"
-                      r="30"
-                      fill="rgba(255, 255, 255, 0.9)"
-                    />
-                    <path d="M24 18L42 30L24 42V18Z" fill="#DB1F1F" />
                   </svg>
                 </div>
               </div>
@@ -1892,13 +1931,6 @@
                 />
                 <div class="play-button">
                   <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
-                    <circle
-                      cx="30"
-                      cy="30"
-                      r="30"
-                      fill="rgba(255, 255, 255, 0.9)"
-                    />
-                    <path d="M24 18L42 30L24 42V18Z" fill="#DB1F1F" />
                   </svg>
                 </div>
               </div>
@@ -1916,13 +1948,6 @@
                 />
                 <div class="play-button">
                   <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
-                    <circle
-                      cx="30"
-                      cy="30"
-                      r="30"
-                      fill="rgba(255, 255, 255, 0.9)"
-                    />
-                    <path d="M24 18L42 30L24 42V18Z" fill="#DB1F1F" />
                   </svg>
                 </div>
               </div>
@@ -1940,13 +1965,6 @@
                 />
                 <div class="play-button">
                   <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
-                    <circle
-                      cx="30"
-                      cy="30"
-                      r="30"
-                      fill="rgba(255, 255, 255, 0.9)"
-                    />
-                    <path d="M24 18L42 30L24 42V18Z" fill="#DB1F1F" />
                   </svg>
                 </div>
               </div>
@@ -1964,13 +1982,6 @@
                 />
                 <div class="play-button">
                   <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
-                    <circle
-                      cx="30"
-                      cy="30"
-                      r="30"
-                      fill="rgba(255, 255, 255, 0.9)"
-                    />
-                    <path d="M24 18L42 30L24 42V18Z" fill="#DB1F1F" />
                   </svg>
                 </div>
               </div>
