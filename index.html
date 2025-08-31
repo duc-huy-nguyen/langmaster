@@ -11,6 +11,7 @@
     />
 
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mobile-menu.css" />
     <!-- Slick Carousel CSS -->
     <link
       rel="stylesheet"
@@ -39,14 +40,86 @@
         <button
           class="navbar-toggler border-0"
           type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#mainNavbar"
-          aria-controls="mainNavbar"
-          aria-expanded="false"
+          id="mobileMenuToggle"
           aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu-overlay"></div>
+        <div class="mobile-menu">
+          <div class="mobile-menu-header">
+            <a href="#" class="mobile-menu-logo">
+              <img src="assets/images/logo.svg" alt="Langmaster" />
+            </a>
+            <button class="mobile-menu-close" id="mobileMenuClose">×</button>
+          </div>
+          <nav class="mobile-nav">
+            <ul class="mobile-nav-list list-unstyled">
+              <li class="mobile-nav-item">
+                <a href="#" class="mobile-nav-link" data-toggle="dropdown">
+                  Giới thiệu
+                  <img src="assets/images/ic-arrow-down.svg" alt="Open" class="icon-down" />
+                </a>
+                <div class="mobile-dropdown-menu">
+                  <div class="mobile-dropdown-content">
+                    <a href="#" class="mobile-dropdown-item">Về chúng tôi</a>
+                    <a href="#" class="mobile-dropdown-item">Tầm nhìn & sứ mệnh</a>
+                    <a href="#" class="mobile-dropdown-item">Đội ngũ giảng viên</a>
+                  </div>
+                </div>
+              </li>
+
+              <li class="mobile-nav-item">
+                <a href="#" class="mobile-nav-link" data-toggle="dropdown">
+                  Khóa học 
+                  <img src="assets/images/ic-arrow-down.svg" alt="Open" class="icon-down" />
+                </a>
+                <div class="mobile-dropdown-menu">
+                  <div class="mobile-dropdown-content">
+                    <div class="mobile-dropdown-header">Khóa học tiếng Anh giao tiếp</div>
+                    <a href="#" class="mobile-dropdown-item">Khóa tiếng Anh giao tiếp online</a>
+                    <a href="#" class="mobile-dropdown-item">Khóa tiếng Anh giao tiếp online 1 kèm 1</a>
+                    
+                    <div class="mobile-dropdown-header">Khóa học IELTS</div>
+                    <a href="#" class="mobile-dropdown-item">Khóa học IELTS Foundation 3.0</a>
+                    <a href="#" class="mobile-dropdown-item">Khóa học Pre IELTS 4.0</a>
+                    <a href="#" class="mobile-dropdown-item">Khóa học IELTS 5.0</a>
+                    <a href="#" class="mobile-dropdown-item">Khóa học IELTS 6.0</a>
+                    <a href="#" class="mobile-dropdown-item">Khóa học IELTS 6.5</a>
+
+                    <div class="mobile-dropdown-header">Khóa học chuyên biệt</div>
+                    <a href="#" class="mobile-dropdown-item">Khóa học tiếng Anh trẻ em</a>
+                    <a href="#" class="mobile-dropdown-item">Khóa học tiếng Anh doanh nghiệp</a>
+                  </div>
+                </div>
+              </li>
+
+              <li class="mobile-nav-item">
+                <a href="#" class="mobile-nav-link">Cảm nhận học viên</a>
+              </li>
+
+              <li class="mobile-nav-item">
+                <a href="#" class="mobile-nav-link">Test miễn phí</a>
+              </li>
+
+              <li class="mobile-nav-item">
+                <a href="#" class="mobile-nav-link" data-toggle="dropdown">
+                  Thư viện
+                  <img src="assets/images/ic-arrow-down.svg" alt="Open" class="icon-down" />
+                </a>
+                <div class="mobile-dropdown-menu">
+                  <div class="mobile-dropdown-content">
+                    <a href="#" class="mobile-dropdown-item">Tài liệu học tập</a>
+                    <a href="#" class="mobile-dropdown-item">Blog</a>
+                    <a href="#" class="mobile-dropdown-item">Tin tức</a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </nav>
+        </div>
 
         <div class="collapse navbar-collapse" id="mainNavbar">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-center">
@@ -957,7 +1030,6 @@
             <!-- Teacher Card 1 -->
             <div class="teacher-card">
               <div class="teacher-card-inner">
-                <!-- <div class="teacher-header-bg"></div>   -->
                 <div class="teacher-crown">
                   <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
                     <path
@@ -1086,7 +1158,6 @@
             <!-- Teacher Card 2 -->
             <div class="teacher-card">
               <div class="teacher-card-inner">
-                <div class="teacher-header-bg"></div>
                 <div class="teacher-crown">
                   <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
                     <path
@@ -1215,7 +1286,6 @@
             <!-- Teacher Card 3 -->
             <div class="teacher-card">
               <div class="teacher-card-inner">
-                <div class="teacher-header-bg"></div>
                 <div class="teacher-crown">
                   <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
                     <path
@@ -1386,7 +1456,6 @@
             <!-- Teacher Card 4 -->
             <div class="teacher-card">
               <div class="teacher-card-inner">
-                <div class="teacher-header-bg"></div>
                 <div class="teacher-crown">
                   <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
                     <path
@@ -1515,7 +1584,6 @@
             <!-- Teacher Card 5 -->
             <div class="teacher-card">
               <div class="teacher-card-inner">
-                <div class="teacher-header-bg"></div>
                 <div class="teacher-crown">
                   <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
                     <path
@@ -1686,7 +1754,6 @@
             <!-- Teacher Card 6 -->
             <div class="teacher-card">
               <div class="teacher-card-inner">
-                <div class="teacher-header-bg"></div>
                 <div class="teacher-crown">
                   <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
                     <path
@@ -2009,66 +2076,66 @@
                     />
                   </div>
                 </div>
-
-                <h4 class="reviewer-name">Tiktoker - Trúc Linh</h4>
-
-                <div class="star-rating">
-                  <div class="stars">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                      <path
-                        d="M10 1L12.5 7.5L19 7.5L14 12L16 19L10 15L4 19L6 12L1 7.5L7.5 7.5L10 1Z"
-                        fill="#FFCB2B"
-                      />
-                    </svg>
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                      <path
-                        d="M10 1L12.5 7.5L19 7.5L14 12L16 19L10 15L4 19L6 12L1 7.5L7.5 7.5L10 1Z"
-                        fill="#FFCB2B"
-                      />
-                    </svg>
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                      <path
-                        d="M10 1L12.5 7.5L19 7.5L14 12L16 19L10 15L4 19L6 12L1 7.5L7.5 7.5L10 1Z"
-                        fill="#FFCB2B"
-                      />
-                    </svg>
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                      <path
-                        d="M10 1L12.5 7.5L19 7.5L14 12L16 19L10 15L4 19L6 12L1 7.5L7.5 7.5L10 1Z"
-                        fill="#FFCB2B"
-                      />
-                    </svg>
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                      <path
-                        d="M10 1L12.5 7.5L19 7.5L14 12L16 19L10 15L4 19L6 12L1 7.5L7.5 7.5L10 1Z"
-                        fill="#FFCB2B"
-                      />
-                    </svg>
-                  </div>
+                <div class="reviewer-occupation">
                   <div class="quote-marks">
-                    <svg width="25" height="16" viewBox="0 0 25 16" fill="none">
-                      <path
-                        d="M11.3 8C11.3 12.4 8.7 15.8 4.3 15.8C1.9 15.8 0 14.1 0 11.9C0 9.7 1.9 8 4.3 8C5.5 8 6.5 8.4 7.2 9.1C7.2 5.4 5.8 3.2 2.9 2.3L4.3 0C9.1 1.3 11.3 4.2 11.3 8ZM25 8C25 12.4 22.4 15.8 18 15.8C15.6 15.8 13.7 14.1 13.7 11.9C13.7 9.7 15.6 8 18 8C19.2 8 20.2 8.4 20.9 9.1C20.9 5.4 19.5 3.2 16.6 2.3L18 0C22.8 1.3 25 4.2 25 8Z"
-                        fill="#DB1F1F"
-                      />
+                    <svg width="26" height="16" viewBox="0 0 26 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M14.1632 4.02C13.3032 6.44 13.8632 9.19 15.7532 11.72C18.6632 15.62 23.1532 15.8 23.9732 15.8H24.1032C24.5232 15.8 24.8532 15.47 24.9032 15.06C24.9532 14.65 24.6932 14.27 24.2932 14.16C22.6132 13.7 22.2032 11.6 22.1132 10.62C23.9232 9.65 25.0732 7.76 25.0732 5.64C25.0732 2.53 22.5632 0 19.4932 0C17.0332 0 14.8932 1.61 14.1732 4.01L14.1632 4.02Z" fill="#DB1F1F"/>
+                      <path d="M1.97317 11.7298C4.88317 15.6298 9.37317 15.8098 10.1932 15.8098H10.3232C10.7432 15.8098 11.0732 15.4798 11.1232 15.0698C11.1732 14.6598 10.9132 14.2798 10.5132 14.1698C8.83317 13.7098 8.42317 11.6098 8.33317 10.6298C10.1432 9.65977 11.2932 7.76977 11.2932 5.64977C11.2932 2.53977 8.78317 0.00976562 5.71317 0.00976562C3.25317 0.00976562 1.11317 1.61977 0.39317 4.01977C-0.46683 6.43977 0.0931696 9.18977 1.98317 11.7198L1.97317 11.7298Z" fill="#DB1F1F"/>
                     </svg>
                   </div>
-                </div>
+                  <h4 class="reviewer-name">Tiktoker - Trúc Linh</h4>
 
-                <div class="testimonial-content">
-                  <p>
-                    Để duy trì sự sáng tạo và không ngừng nâng cao trình độ
-                    tiếng Anh, bí quyết của mình chính là đăng ký lớp học 1 kèm
-                    1 ở Langmaster. Tại đây, mình được hình thành thói quen tốt
-                    đó là kết hợp tự học và học online. Tự học là để chủ động
-                    trong tốc độ, còn học với Langmaster để có môi trường luyện
-                    tập phản xạ.
-                  </p>
-                </div>
+                  <div class="star-rating">
+                    <div class="stars">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path
+                          d="M10 1L12.5 7.5L19 7.5L14 12L16 19L10 15L4 19L6 12L1 7.5L7.5 7.5L10 1Z"
+                          fill="#FFCB2B"
+                        />
+                      </svg>
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path
+                          d="M10 1L12.5 7.5L19 7.5L14 12L16 19L10 15L4 19L6 12L1 7.5L7.5 7.5L10 1Z"
+                          fill="#FFCB2B"
+                        />
+                      </svg>
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path
+                          d="M10 1L12.5 7.5L19 7.5L14 12L16 19L10 15L4 19L6 12L1 7.5L7.5 7.5L10 1Z"
+                          fill="#FFCB2B"
+                        />
+                      </svg>
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path
+                          d="M10 1L12.5 7.5L19 7.5L14 12L16 19L10 15L4 19L6 12L1 7.5L7.5 7.5L10 1Z"
+                          fill="#FFCB2B"
+                        />
+                      </svg>
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path
+                          d="M10 1L12.5 7.5L19 7.5L14 12L16 19L10 15L4 19L6 12L1 7.5L7.5 7.5L10 1Z"
+                          fill="#FFCB2B"
+                        />
+                      </svg>
+                    </div>
+                  </div>
 
-                <div class="testimonial-cta">
-                  <button class="btn-method-details">Xem chi tiết &raquo;</button>
-                  </button>
+                  <div class="testimonial-content">
+                    <p>
+                      Để duy trì sự sáng tạo và không ngừng nâng cao trình độ
+                      tiếng Anh, bí quyết của mình chính là đăng ký lớp học 1 kèm
+                      1 ở Langmaster. Tại đây, mình được hình thành thói quen tốt
+                      đó là kết hợp tự học và học online. Tự học là để chủ động
+                      trong tốc độ, còn học với Langmaster để có môi trường luyện
+                      tập phản xạ.
+                    </p>
+                  </div>
+
+                  <div class="testimonial-cta">
+                    <button class="btn-method-details">Xem chi tiết &raquo;</button>
+                    </button>
+                  </div>
+
                 </div>
 
                 <div class="testimonial-footer-bg"></div>
@@ -2087,73 +2154,72 @@
                     />
                   </div>
                 </div>
-
-                <h4 class="reviewer-name">Tiktoker - Đỗ Văn Linh</h4>
-
-                <div class="star-rating">
-                  <div class="stars">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                      <path
-                        d="M10 1L12.5 7.5L19 7.5L14 12L16 19L10 15L4 19L6 12L1 7.5L7.5 7.5L10 1Z"
-                        fill="#FFCB2B"
-                      />
-                    </svg>
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                      <path
-                        d="M10 1L12.5 7.5L19 7.5L14 12L16 19L10 15L4 19L6 12L1 7.5L7.5 7.5L10 1Z"
-                        fill="#FFCB2B"
-                      />
-                    </svg>
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                      <path
-                        d="M10 1L12.5 7.5L19 7.5L14 12L16 19L10 15L4 19L6 12L1 7.5L7.5 7.5L10 1Z"
-                        fill="#FFCB2B"
-                      />
-                    </svg>
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                      <path
-                        d="M10 1L12.5 7.5L19 7.5L14 12L16 19L10 15L4 19L6 12L1 7.5L7.5 7.5L10 1Z"
-                        fill="#FFCB2B"
-                      />
-                    </svg>
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                      <path
-                        d="M10 1L12.5 7.5L19 7.5L14 12L16 19L10 15L4 19L6 12L1 7.5L7.5 7.5L10 1Z"
-                        fill="#FFCB2B"
-                      />
-                    </svg>
-                  </div>
+                <div class="reviewer-occupation">
                   <div class="quote-marks">
-                    <svg width="25" height="16" viewBox="0 0 25 16" fill="none">
-                      <path
-                        d="M11.3 8C11.3 12.4 8.7 15.8 4.3 15.8C1.9 15.8 0 14.1 0 11.9C0 9.7 1.9 8 4.3 8C5.5 8 6.5 8.4 7.2 9.1C7.2 5.4 5.8 3.2 2.9 2.3L4.3 0C9.1 1.3 11.3 4.2 11.3 8ZM25 8C25 12.4 22.4 15.8 18 15.8C15.6 15.8 13.7 14.1 13.7 11.9C13.7 9.7 15.6 8 18 8C19.2 8 20.2 8.4 20.9 9.1C20.9 5.4 19.5 3.2 16.6 2.3L18 0C22.8 1.3 25 4.2 25 8Z"
-                        fill="#DB1F1F"
-                      />
+                    <svg width="26" height="16" viewBox="0 0 26 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M14.1632 4.02C13.3032 6.44 13.8632 9.19 15.7532 11.72C18.6632 15.62 23.1532 15.8 23.9732 15.8H24.1032C24.5232 15.8 24.8532 15.47 24.9032 15.06C24.9532 14.65 24.6932 14.27 24.2932 14.16C22.6132 13.7 22.2032 11.6 22.1132 10.62C23.9232 9.65 25.0732 7.76 25.0732 5.64C25.0732 2.53 22.5632 0 19.4932 0C17.0332 0 14.8932 1.61 14.1732 4.01L14.1632 4.02Z" fill="#DB1F1F"/>
+                      <path d="M1.97317 11.7298C4.88317 15.6298 9.37317 15.8098 10.1932 15.8098H10.3232C10.7432 15.8098 11.0732 15.4798 11.1232 15.0698C11.1732 14.6598 10.9132 14.2798 10.5132 14.1698C8.83317 13.7098 8.42317 11.6098 8.33317 10.6298C10.1432 9.65977 11.2932 7.76977 11.2932 5.64977C11.2932 2.53977 8.78317 0.00976562 5.71317 0.00976562C3.25317 0.00976562 1.11317 1.61977 0.39317 4.01977C-0.46683 6.43977 0.0931696 9.18977 1.98317 11.7198L1.97317 11.7298Z" fill="#DB1F1F"/>
                     </svg>
                   </div>
-                </div>
+                  <h4 class="reviewer-name">Tiktoker - Đỗ Văn Linh</h4>
 
-                <div class="testimonial-content">
-                  <p>
-                    Đến với lớp học Offline của Langmaster, Linh đã được trải
-                    nghiệm 3 KHÔNG:
-                  </p>
-                  <p>
-                    – Không được chỉ ngồi im chép bài, vì bạn cần phải luyện kỹ
-                    năng giao tiếp, phải nói, nói và nói liên tục.
-                  </p>
-                  <p>
-                    – Không buồn ngủ vì không khí lớp học rất sôi động và ai
-                    cũng nhiệt tình phát biểu.
-                  </p>
-                  <p>
-                    – Không sợ xấu hổ khi nói sai vì mình sẽ được giáo viên sửa
-                    lỗi liên tục và tiến bộ ngay tức thì.
-                  </p>
-                </div>
+                  <div class="star-rating">
+                    <div class="stars">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path
+                          d="M10 1L12.5 7.5L19 7.5L14 12L16 19L10 15L4 19L6 12L1 7.5L7.5 7.5L10 1Z"
+                          fill="#FFCB2B"
+                        />
+                      </svg>
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path
+                          d="M10 1L12.5 7.5L19 7.5L14 12L16 19L10 15L4 19L6 12L1 7.5L7.5 7.5L10 1Z"
+                          fill="#FFCB2B"
+                        />
+                      </svg>
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path
+                          d="M10 1L12.5 7.5L19 7.5L14 12L16 19L10 15L4 19L6 12L1 7.5L7.5 7.5L10 1Z"
+                          fill="#FFCB2B"
+                        />
+                      </svg>
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path
+                          d="M10 1L12.5 7.5L19 7.5L14 12L16 19L10 15L4 19L6 12L1 7.5L7.5 7.5L10 1Z"
+                          fill="#FFCB2B"
+                        />
+                      </svg>
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path
+                          d="M10 1L12.5 7.5L19 7.5L14 12L16 19L10 15L4 19L6 12L1 7.5L7.5 7.5L10 1Z"
+                          fill="#FFCB2B"
+                        />
+                      </svg>
+                    </div>
+                  </div>
 
-                <div class="testimonial-cta">
-                  <button class="btn-method-details">Xem chi tiết &raquo;</button>
+                  <div class="testimonial-content">
+                    <p class="testimonial-text">
+                      Đến với lớp học Offline của Langmaster, Linh đã được trải
+                      nghiệm 3 KHÔNG:
+                    </p>
+                    <p class="testimonial-text">
+                      – Không được chỉ ngồi im chép bài, vì bạn cần phải luyện kỹ
+                      năng giao tiếp, phải nói, nói và nói liên tục.
+                    </p>
+                    <p class="testimonial-text">
+                      – Không buồn ngủ vì không khí lớp học rất sôi động và ai
+                      cũng nhiệt tình phát biểu.
+                    </p>
+                    <p class="testimonial-text">
+                      – Không sợ xấu hổ khi nói sai vì mình sẽ được giáo viên sửa
+                      lỗi liên tục và tiến bộ ngay tức thì.
+                    </p>
+                  </div>
+
+                  <div class="testimonial-cta">
+                    <button class="btn-method-details">Xem chi tiết &raquo;</button>
+                  </div>
                 </div>
 
                 <div class="testimonial-footer-bg"></div>
@@ -2172,67 +2238,65 @@
                     />
                   </div>
                 </div>
-
-                <h4 class="reviewer-name">Nguyễn Thúy</h4>
-
-                <div class="star-rating">
-                  <div class="stars">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                      <path
-                        d="M10 1L12.5 7.5L19 7.5L14 12L16 19L10 15L4 19L6 12L1 7.5L7.5 7.5L10 1Z"
-                        fill="#FFCB2B"
-                      />
-                    </svg>
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                      <path
-                        d="M10 1L12.5 7.5L19 7.5L14 12L16 19L10 15L4 19L6 12L1 7.5L7.5 7.5L10 1Z"
-                        fill="#FFCB2B"
-                      />
-                    </svg>
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                      <path
-                        d="M10 1L12.5 7.5L19 7.5L14 12L16 19L10 15L4 19L6 12L1 7.5L7.5 7.5L10 1Z"
-                        fill="#FFCB2B"
-                      />
-                    </svg>
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                      <path
-                        d="M10 1L12.5 7.5L19 7.5L14 12L16 19L10 15L4 19L6 12L1 7.5L7.5 7.5L10 1Z"
-                        fill="#FFCB2B"
-                      />
-                    </svg>
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                      <path
-                        d="M10 1L12.5 7.5L19 7.5L14 12L16 19L10 15L4 19L6 12L1 7.5L7.5 7.5L10 1Z"
-                        fill="#FFCB2B"
-                      />
-                    </svg>
-                  </div>
+                <div class="reviewer-occupation">
                   <div class="quote-marks">
-                    <svg width="25" height="16" viewBox="0 0 25 16" fill="none">
-                      <path
-                        d="M11.3 8C11.3 12.4 8.7 15.8 4.3 15.8C1.9 15.8 0 14.1 0 11.9C0 9.7 1.9 8 4.3 8C5.5 8 6.5 8.4 7.2 9.1C7.2 5.4 5.8 3.2 2.9 2.3L4.3 0C9.1 1.3 11.3 4.2 11.3 8ZM25 8C25 12.4 22.4 15.8 18 15.8C15.6 15.8 13.7 14.1 13.7 11.9C13.7 9.7 15.6 8 18 8C19.2 8 20.2 8.4 20.9 9.1C20.9 5.4 19.5 3.2 16.6 2.3L18 0C22.8 1.3 25 4.2 25 8Z"
-                        fill="#DB1F1F"
-                      />
+                    <svg width="26" height="16" viewBox="0 0 26 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M14.1632 4.02C13.3032 6.44 13.8632 9.19 15.7532 11.72C18.6632 15.62 23.1532 15.8 23.9732 15.8H24.1032C24.5232 15.8 24.8532 15.47 24.9032 15.06C24.9532 14.65 24.6932 14.27 24.2932 14.16C22.6132 13.7 22.2032 11.6 22.1132 10.62C23.9232 9.65 25.0732 7.76 25.0732 5.64C25.0732 2.53 22.5632 0 19.4932 0C17.0332 0 14.8932 1.61 14.1732 4.01L14.1632 4.02Z" fill="#DB1F1F"/>
+                      <path d="M1.97317 11.7298C4.88317 15.6298 9.37317 15.8098 10.1932 15.8098H10.3232C10.7432 15.8098 11.0732 15.4798 11.1232 15.0698C11.1732 14.6598 10.9132 14.2798 10.5132 14.1698C8.83317 13.7098 8.42317 11.6098 8.33317 10.6298C10.1432 9.65977 11.2932 7.76977 11.2932 5.64977C11.2932 2.53977 8.78317 0.00976562 5.71317 0.00976562C3.25317 0.00976562 1.11317 1.61977 0.39317 4.01977C-0.46683 6.43977 0.0931696 9.18977 1.98317 11.7198L1.97317 11.7298Z" fill="#DB1F1F"/>
                     </svg>
                   </div>
-                </div>
+                  <h4 class="reviewer-name">Nguyễn Thúy</h4>
 
-                <div class="testimonial-content">
-                  <p>
-                    Trong sự kiện Martech Summit Asia được tổ chức tại
-                    Singapore, anh Tony Dũng – Founder TAGT Langmaster đã tình
-                    cờ gặp lại và có buổi phỏng vấn trực tiếp với chị Thúy
-                    (Global Marketing Executive) – cựu học viên của trung tâm.
-                    Với nền tảng tiếng Anh vững chắc từ khi còn học ở
-                    Langmaster, con đường sự nghiệp và phát triển bản thân của
-                    chị Thúy đã phát triển rất xa và hiện…
-                  </p>
-                </div>
+                  <div class="star-rating">
+                    <div class="stars">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path
+                          d="M10 1L12.5 7.5L19 7.5L14 12L16 19L10 15L4 19L6 12L1 7.5L7.5 7.5L10 1Z"
+                          fill="#FFCB2B"
+                        />
+                      </svg>
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path
+                          d="M10 1L12.5 7.5L19 7.5L14 12L16 19L10 15L4 19L6 12L1 7.5L7.5 7.5L10 1Z"
+                          fill="#FFCB2B"
+                        />
+                      </svg>
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path
+                          d="M10 1L12.5 7.5L19 7.5L14 12L16 19L10 15L4 19L6 12L1 7.5L7.5 7.5L10 1Z"
+                          fill="#FFCB2B"
+                        />
+                      </svg>
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path
+                          d="M10 1L12.5 7.5L19 7.5L14 12L16 19L10 15L4 19L6 12L1 7.5L7.5 7.5L10 1Z"
+                          fill="#FFCB2B"
+                        />
+                      </svg>
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path
+                          d="M10 1L12.5 7.5L19 7.5L14 12L16 19L10 15L4 19L6 12L1 7.5L7.5 7.5L10 1Z"
+                          fill="#FFCB2B"
+                        />
+                      </svg>
+                    </div>
+                  </div>
 
-                <div class="testimonial-cta">
+                  <div class="testimonial-content">
+                    <p>
+                      Trong sự kiện Martech Summit Asia được tổ chức tại
+                      Singapore, anh Tony Dũng – Founder TAGT Langmaster đã tình
+                      cờ gặp lại và có buổi phỏng vấn trực tiếp với chị Thúy
+                      (Global Marketing Executive) – cựu học viên của trung tâm.
+                      Với nền tảng tiếng Anh vững chắc từ khi còn học ở
+                      Langmaster, con đường sự nghiệp và phát triển bản thân của
+                      chị Thúy đã phát triển rất xa và hiện…
+                    </p>
+                  </div>
 
-                  <button class="btn-method-details">Xem chi tiết &raquo;</button>
+                  <div class="testimonial-cta">
+                    <button class="btn-method-details">Xem chi tiết &raquo;</button>
+                  </div>
                 </div>
 
                 <div class="testimonial-footer-bg"></div>
@@ -2464,7 +2528,7 @@
                 alt="Strategic Partner 4"
               />
             </div>
-            <!-- Additional Partner Logos for Carousel -->
+            <!-- Additiohnal Partner Logos for Carousel -->
             <div class="partner-logo">
               <img
                 src="assets/images/partner-logo-1.png"
@@ -2504,115 +2568,93 @@
     <footer class="footer-section">
       <div class="container-fluid">
         <div class="footer-container">
-          <!-- Logo and Tagline -->
+          <!-- Footer Brand -->
           <div class="footer-brand">
             <div class="footer-logo">
               <img src="assets/images/logo.svg" alt="Langmaster" />
             </div>
             <h5 class="footer-tagline">Change your habit, Change your life</h5>
             <p class="footer-description">
-              Langmaster là hệ sinh thái đào tạo tiếng Anh toàn diện với 16+ năm
-              uy tín, bao gồm các chương trình: Tiếng Anh giao tiếp, Luyện thi
-              IELTS và tiếng Anh trẻ em.
+              Langmaster là hệ sinh thái đào tạo tiếng Anh toàn diện với 16+ năm uy tín, bao gồm các chương trình: Tiếng Anh giao tiếp, luyện thi IELTS, tiếng Anh trẻ em và tiếng Anh doanh nghiệp.
             </p>
 
-            <!-- Social Media Icons -->
             <div class="footer-social">
-              <a href="#" class="social-icon">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                  <path
-                    d="M10 0C4.477 0 0 4.477 0 10C0 15.523 4.477 20 10 20C15.523 20 20 15.523 20 10C20 4.477 15.523 0 10 0ZM13.5 6.5H12.5C12.224 6.5 12 6.724 12 7V8H13.5V10H12V15H10V10H8.5V8H10V7C10 5.895 10.895 5 12 5H13.5V6.5Z"
-                    fill="white"
-                  />
+              <a href="#" class="social-icon" target="_blank">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20 10C20 4.48 15.52 0 10 0C4.48 0 0 4.48 0 10C0 14.84 3.44 18.87 8 19.8V13H6V10H8V7.5C8 5.57 9.57 4 11.5 4H14V7H12C11.45 7 11 7.45 11 8V10H14V13H11V19.95C16.05 19.45 20 15.19 20 10Z" fill="white"/>
                 </svg>
               </a>
-              <a href="#" class="social-icon">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                  <path
-                    d="M10 0C4.477 0 0 4.477 0 10C0 15.523 4.477 20 10 20C15.523 20 20 15.523 20 10C20 4.477 15.523 0 10 0ZM14.5 7.5H13.5C13.224 7.5 13 7.724 13 8V9H14.5V11H13V15H11V11H9.5V9H11V8C11 6.895 11.895 6 13 6H14.5V7.5Z"
-                    fill="white"
-                  />
+              <a href="#" class="social-icon" target="_blank">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10 0C4.48 0 0 4.48 0 10C0 15.52 4.48 20 10 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 10 0ZM14.64 7.11C14.65 7.23 14.65 7.35 14.65 7.47C14.65 10.78 12.12 14.62 7.51 14.62C6.01 14.62 4.62 14.19 3.43 13.44C3.64 13.46 3.84 13.47 4.05 13.47C5.31 13.47 6.47 13.06 7.41 12.34C6.23 12.32 5.24 11.54 4.89 10.47C5.31 10.53 5.69 10.53 6.13 10.42C4.91 10.17 4 9.1 4 7.81V7.78C4.37 7.98 4.81 8.1 5.27 8.12C4.95 7.9 4.68 7.61 4.49 7.27C4.3 6.93 4.2 6.55 4.2 6.16C4.2 5.37 4.44 4.65 4.86 4.05C6.17 5.67 8.14 6.74 10.34 6.85C10 5.06 11.34 3.62 13 3.62C13.78 3.62 14.49 3.95 15 4.47C15.63 4.35 16.23 4.11 16.76 3.78C16.54 4.45 16.08 5 15.48 5.35C16.06 5.29 16.62 5.13 17.13 4.89C16.76 5.45 16.3 5.95 15.77 6.35C14.64 7.11 14.64 7.11 14.64 7.11Z" fill="white"/>
                 </svg>
               </a>
-              <a href="#" class="social-icon">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                  <path
-                    d="M10 0C4.477 0 0 4.477 0 10C0 15.523 4.477 20 10 20C15.523 20 20 15.523 20 10C20 4.477 15.523 0 10 0ZM15 7.5H13.5C13.224 7.5 13 7.724 13 8V9H15V11H13V15H11V11H9.5V9H11V8C11 6.895 11.895 6 13 6H15V7.5Z"
-                    fill="white"
-                  />
+              <a href="#" class="social-icon" target="_blank">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M19.98 5.88C19.86 4.82 19.03 3.97 17.96 3.85C16.01 3.59 13.58 3.35 10.7 3.35H9.3C6.42 3.35 3.99 3.59 2.04 3.85C0.97 3.97 0.14 4.82 0.02 5.88C-0.1 6.94 -0.12 8.09 0.1 9.27V10.73C-0.12 11.91 -0.1 13.06 0.02 14.12C0.14 15.18 0.97 16.03 2.04 16.15C3.99 16.41 6.42 16.65 9.3 16.65H10.7C13.58 16.65 16.01 16.41 17.96 16.15C19.03 16.03 19.86 15.18 19.98 14.12C20.1 13.06 20.12 11.91 19.9 10.73V9.27C20.12 8.09 20.1 6.94 19.98 5.88ZM12.23 10.34L8.97 12.08C8.83 12.16 8.66 12.2 8.5 12.2C8.34 12.2 8.17 12.16 8.03 12.08C7.76 11.92 7.6 11.64 7.6 11.34V7.86C7.6 7.56 7.76 7.28 8.03 7.12C8.3 6.96 8.64 6.96 8.91 7.12L12.17 8.86C12.44 9.02 12.6 9.3 12.6 9.6C12.6 9.9 12.5 10.18 12.23 10.34Z" fill="white"/>
+                </svg>
+              </a>
+              <a href="#" class="social-icon" target="_blank">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10 0C4.48 0 0 4.48 0 10C0 14.84 3.44 18.87 8 19.8V13H6V10H8V7.5C8 5.57 9.57 4 11.5 4H14V7H12C11.45 7 11 7.45 11 8V10H14V13H11V19.95C16.05 19.45 20 15.19 20 10C20 4.48 15.52 0 10 0Z" fill="white"/>
                 </svg>
               </a>
             </div>
+
+            <!-- Footer Images -->
+            <div class="footer-images">
+              <img src="assets/images/footer-image-1.png" alt="Footer Image 1" class="footer-img" />
+              <img src="assets/images/footer-image-2.png" alt="Footer Image 2" class="footer-img" />
+            </div>
           </div>
 
-          <!-- About Langmaster -->
+          <!-- Footer About -->
           <div class="footer-about">
             <h3 class="footer-title">Về Langmaster</h3>
             <ul class="footer-links">
               <li><a href="#">Giới thiệu</a></li>
               <li><a href="#">Lịch sử hình thành</a></li>
               <li><a href="#">Chính sách bảo mật</a></li>
-              <li><a href="#">Trách nhiệm và cam kết</a></li>
-              <li><a href="#">Thông tin thanh toán</a></li>
+              <li><a href="#">Chính sách thanh toán</a></li>
+              <li><a href="#">Tuyển dụng</a></li>
             </ul>
           </div>
 
           <!-- Contact Information -->
           <div class="footer-contact">
-            <h3 class="footer-title">Tiếng Anh giao tiếp Langmaster</h3>
+            <h3 class="footer-title">TIẾNG ANH GIAO TIẾP LANGMASTER</h3>
 
             <div class="contact-item">
               <div class="contact-icon">
-                <svg width="15" height="15" viewBox="0 0 15 15" fill="none">
-                  <path
-                    d="M7.5 0C3.358 0 0 3.358 0 7.5C0 11.642 3.358 15 7.5 15C11.642 15 15 11.642 15 7.5C15 3.358 11.642 0 7.5 0ZM7.5 2C8.328 2 9 2.672 9 3.5C9 4.328 8.328 5 7.5 5C6.672 5 6 4.328 6 3.5C6 2.672 6.672 2 7.5 2ZM7.5 13C6.5 13 5.5 12.5 4.5 12C4.5 10.5 6 9.5 7.5 9.5C9 9.5 10.5 10.5 10.5 12C9.5 12.5 8.5 13 7.5 13Z"
-                    fill="white"
-                  />
+                <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7 0C3.13 0 0 3.13 0 7C0 12.25 7 18 7 18C7 18 14 12.25 14 7C14 3.13 10.87 0 7 0ZM7 9.5C5.62 9.5 4.5 8.38 4.5 7C4.5 5.62 5.62 4.5 7 4.5C8.38 4.5 9.5 5.62 9.5 7C9.5 8.38 8.38 9.5 7 9.5Z" fill="white"/>
                 </svg>
               </div>
-              <span class="contact-text"
-                >VPT: Số 201 Cầu Giấy, phường Dịch Vọng, quận Cầu Giấy, TP Hà
-                Nội</span
-              >
+              <span class="contact-text">VPT: Số 201 Cầu Giấy, phường Dịch Vọng, quận Cầu Giấy, TP Hà Nội</span>
             </div>
 
             <div class="contact-item">
               <div class="contact-icon">
-                <svg width="15" height="15" viewBox="0 0 15 15" fill="none">
-                  <path
-                    d="M7.5 0C3.358 0 0 3.358 0 7.5C0 11.642 3.358 15 7.5 15C11.642 15 15 11.642 15 7.5C15 3.358 11.642 0 7.5 0ZM7.5 2C8.328 2 9 2.672 9 3.5C9 4.328 8.328 5 7.5 5C6.672 5 6 4.328 6 3.5C6 2.672 6.672 2 7.5 2ZM7.5 13C6.5 13 5.5 12.5 4.5 12C4.5 10.5 6 9.5 7.5 9.5C9 9.5 10.5 10.5 10.5 12C9.5 12.5 8.5 13 7.5 13Z"
-                    fill="white"
-                  />
+                <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7 0C3.13 0 0 3.13 0 7C0 12.25 7 18 7 18C7 18 14 12.25 14 7C14 3.13 10.87 0 7 0ZM7 9.5C5.62 9.5 4.5 8.38 4.5 7C4.5 5.62 5.62 4.5 7 4.5C8.38 4.5 9.5 5.62 9.5 7C9.5 8.38 8.38 9.5 7 9.5Z" fill="white"/>
                 </svg>
               </div>
-              <span class="contact-text"
-                >Cơ sở 1: Số 169 Xuân Thủy, phường Dịch Vọng Hậu, quận Cầu Giấy,
-                TP Hà Nội</span
-              >
+              <span class="contact-text">Cơ sở 1: Số 169 Xuân Thủy, phường Dịch Vọng Hậu, quận Cầu Giấy, TP Hà Nội</span>
             </div>
 
             <div class="contact-item">
               <div class="contact-icon">
-                <svg width="14" height="15" viewBox="0 0 14 15" fill="none">
-                  <path
-                    d="M7 0C3.134 0 0 3.134 0 7C0 10.866 3.134 14 7 14C10.866 14 14 10.866 14 7C14 3.134 10.866 0 7 0ZM7 2C8.104 2 9 2.896 9 4C9 5.104 8.104 6 7 6C5.896 6 5 5.104 5 4C5 2.896 5.896 2 7 2ZM7 12C6 12 5 11.5 4 11C4 9.5 5.5 8.5 7 8.5C8.5 8.5 10 9.5 10 11C9 11.5 8 12 7 12Z"
-                    fill="white"
-                  />
+                <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7 0C3.13 0 0 3.13 0 7C0 12.25 7 18 7 18C7 18 14 12.25 14 7C14 3.13 10.87 0 7 0ZM7 9.5C5.62 9.5 4.5 8.38 4.5 7C4.5 5.62 5.62 4.5 7 4.5C8.38 4.5 9.5 5.62 9.5 7C9.5 8.38 8.38 9.5 7 9.5Z" fill="white"/>
                 </svg>
               </div>
-              <span class="contact-text"
-                >Cơ sở 2: Số 179 Trường Chinh, phường Khương Thượng, quận Đống
-                Đa, TP Hà Nội</span
-              >
+              <span class="contact-text">Cơ sở 2: Số 179 Trường Chinh, phường Khương Thượng, quận Đống Đa, TP Hà Nội</span>
             </div>
 
             <div class="contact-item">
               <div class="contact-icon">
-                <svg width="17" height="15" viewBox="0 0 17 15" fill="none">
-                  <path
-                    d="M8.5 0C3.806 0 0 3.806 0 8.5C0 13.194 3.806 17 8.5 17C13.194 17 17 13.194 17 8.5C17 3.806 13.194 0 8.5 0ZM8.5 2C9.88 2 11 3.12 11 4.5C11 5.88 9.88 7 8.5 7C7.12 7 6 5.88 6 4.5C6 3.12 7.12 2 8.5 2ZM8.5 15C7 15 5.5 14.5 4.5 14C4.5 12.5 6 11.5 8.5 11.5C11 11.5 12.5 12.5 12.5 14C11.5 14.5 10 15 8.5 15Z"
-                    fill="white"
-                  />
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.01 12.38C15.78 12.38 14.59 12.18 13.48 11.82C13.13 11.7 12.74 11.79 12.47 12.06L10.9 14.03C8.07 12.68 5.42 10.13 4.01 7.2L5.96 5.54C6.23 5.26 6.31 4.87 6.2 4.52C5.83 3.41 5.64 2.22 5.64 0.99C5.64 0.45 5.19 0 4.65 0H1.19C0.65 0 0 0.24 0 0.99C0 10.28 7.73 18 17.01 18C17.72 18 18 17.37 18 16.82V13.37C18 12.83 17.55 12.38 17.01 12.38Z" fill="white"/>
                 </svg>
               </div>
               <span class="contact-text">0962.154.139 - 0962.152.228</span>
@@ -2620,29 +2662,12 @@
 
             <div class="contact-item">
               <div class="contact-icon">
-                <svg width="16" height="12" viewBox="0 0 16 12" fill="none">
-                  <path
-                    d="M0 2C0 0.895 0.895 0 2 0H14C15.105 0 16 0.895 16 2V10C16 11.105 15.105 12 14 12H2C0.895 12 0 11.105 0 10V2ZM2 2V10H14V2H2ZM2 2L8 6L14 2H2Z"
-                    fill="white"
-                  />
+                <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18 0H2C0.9 0 0.00999999 0.9 0.00999999 2L0 14C0 15.1 0.9 16 2 16H18C19.1 16 20 15.1 20 14V2C20 0.9 19.1 0 18 0ZM18 4L10 9L2 4V2L10 7L18 2V4Z" fill="white"/>
                 </svg>
               </div>
               <span class="contact-text">info@langmaster.edu.vn</span>
             </div>
-          </div>
-
-          <!-- Footer Images -->
-          <div class="footer-images">
-            <img
-              src="assets/images/footer-image-1.png"
-              alt="Footer Image 1"
-              class="footer-img"
-            />
-            <img
-              src="assets/images/footer-image-2.png"
-              alt="Footer Image 2"
-              class="footer-img"
-            />
           </div>
         </div>
       </div>
@@ -2922,6 +2947,63 @@
             },
           },
         ],
+      }).on('init afterChange', function(event, slick) {
+        const totalSlides = slick.slideCount;
+        const slidesToShow = slick.options.slidesToShow;
+        const currentSlide = slick.currentSlide;
+        const segments = Math.ceil(totalSlides / slidesToShow);
+        const currentSegment = Math.floor(currentSlide / slidesToShow);
+        
+        $('.progress-bar-fill').css({
+          'width': `${100 / segments}%`,
+          'transform': `translateX(${currentSegment * 100}%)`
+        });
+      });
+
+      // Mobile Menu
+      document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const mobileMenuClose = document.getElementById('mobileMenuClose');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link[data-toggle="dropdown"]');
+
+        // Toggle mobile menu
+        mobileMenuToggle.addEventListener('click', function() {
+            mobileMenu.classList.toggle('active');
+            mobileMenuOverlay.classList.toggle('active');
+        });
+
+        // Close menu when clicking overlay or close button
+        const closeMenu = () => {
+            mobileMenu.classList.remove('active');
+            mobileMenuOverlay.classList.remove('active');
+        };
+
+        mobileMenuOverlay.addEventListener('click', closeMenu);
+        mobileMenuClose.addEventListener('click', closeMenu);
+
+        // Toggle dropdowns
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const dropdownMenu = this.nextElementSibling;
+                const isOpen = dropdownMenu.classList.contains('active');
+                
+                // Close all other dropdowns
+                document.querySelectorAll('.mobile-dropdown-menu.active').forEach(menu => {
+                    if (menu !== dropdownMenu) {
+                        menu.classList.remove('active');
+                        menu.previousElementSibling.querySelector('.icon-down').style.transform = 'rotate(0deg)';
+                    }
+                });
+
+                // Toggle current dropdown
+                dropdownMenu.classList.toggle('active');
+                const arrow = this.querySelector('.icon-down');
+                arrow.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+            });
+        });
       });
     </script>
   </body>
