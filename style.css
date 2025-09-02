@@ -74,6 +74,7 @@ h5 {
 
 /* Navbar */
 .navbar-custom {
+  position: relative;
   background-color: #ffffff;
   height: 72px;
   padding: 0;
@@ -157,7 +158,8 @@ h5 {
 }
 
 .nav-link-custom:hover .icon-down {
-  filter: brightness(0) saturate(100%) invert(21%) sepia(75%) saturate(4295%) hue-rotate(347deg) brightness(89%) contrast(89%);
+  filter: brightness(0) saturate(100%) invert(21%) sepia(75%) saturate(4295%)
+    hue-rotate(347deg) brightness(89%) contrast(89%);
 }
 
 .btn-search {
@@ -195,7 +197,7 @@ h5 {
 }
 
 .dropdown-menu::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   right: 0;
@@ -259,7 +261,7 @@ h5 {
 
 .dropdown-item:hover:after,
 .dropdown-item:focus:after {
-  content: '➔';
+  content: "➔";
   position: relative;
   color: #db1f1f;
   font-size: 14px;
@@ -688,7 +690,7 @@ h5 {
   .stat-title {
     display: none;
   }
-  
+
   .stat-title-mobile {
     display: block;
     font-family: "SVN-Gilroy", sans-serif;
@@ -746,27 +748,27 @@ h5 {
 }
 
 .desktop-only {
-  display: block;
+  display: block !important;
 }
 
 .mobile-only {
-  display: none;
+  display: none !important;
 }
 
 @media (max-width: 991.98px) {
   .desktop-only {
-    display: none;
+    display: none !important;
   }
-  
+
   .mobile-only {
-    display: block;
+    display: block !important;
   }
-  
+
   .ecosystem-title {
     font-size: 32px;
     line-height: 1.2;
   }
-  
+
   .ecosystem-title span {
     display: inline-block;
   }
@@ -785,7 +787,7 @@ h5 {
     display: block;
     text-align: center;
   }
-  
+
   .mobile-decoration img {
     width: 100%;
     height: auto;
@@ -984,7 +986,6 @@ h5 {
   .course-types-grid {
     gap: 12px;
     padding: 0 30px;
-    width: 100vw;
     margin-left: -20px;
     margin-right: -20px;
   }
@@ -1008,11 +1009,11 @@ h5 {
   align-items: center;
   width: 100%;
   border-radius: 20px;
-  background: #FFFFFF;
+  background: #ffffff;
 }
 
 .course-type-card.course-active .course-card-header {
-  border: 1px solid #DB1F1F;
+  border: 1px solid #db1f1f;
 }
 
 @media (max-width: 991.98px) {
@@ -1027,7 +1028,7 @@ h5 {
   }
 
   .course-active {
-    border: 1px solid #DB1F1F;
+    border: 1px solid #db1f1f;
   }
 }
 
@@ -1047,7 +1048,7 @@ h5 {
     border-radius: 10px;
   }
   .course-active {
-    border: 1px solid #DB1F1F
+    border: 1px solid #db1f1f;
   }
 
   .course-type-card {
@@ -1178,8 +1179,7 @@ h5 {
 
   .benefit-item {
     gap: 10px !important;
-  } 
-
+  }
 }
 
 .course-benefits .benefit-item {
@@ -1787,7 +1787,7 @@ h5 {
   left: 100%;
   width: calc(100% - 24px);
   height: 100vh;
-  background: #FFF;
+  background: #fff;
   z-index: 1000;
   transition: transform 0.3s ease;
   display: flex;
@@ -1850,11 +1850,12 @@ h5 {
 }
 
 .mobile-nav-link[aria-expanded="true"] {
-  color: #DB1F1F;
+  color: #db1f1f;
 }
 
 .mobile-nav-link[aria-expanded="true"] .icon-down {
-  filter: invert(15%) sepia(87%) saturate(4829%) hue-rotate(347deg) brightness(96%) contrast(85%);
+  filter: invert(15%) sepia(87%) saturate(4829%) hue-rotate(347deg)
+    brightness(96%) contrast(85%);
   transform: rotate(180deg);
 }
 
@@ -1908,14 +1909,14 @@ h5 {
 }
 
 .mobile-dropdown-header:before {
-  content: '';
+  content: "";
   position: absolute;
   left: 32px;
   top: 50%;
   transform: translateY(-50%) rotate(45deg);
   width: 6px;
   height: 6px;
-  background: #DB1F1F;
+  background: #db1f1f;
 }
 
 .mobile-dropdown-header.selected {
@@ -1936,7 +1937,7 @@ h5 {
 }
 
 .mobile-dropdown-item:before {
-  content: '';
+  content: "";
   position: absolute;
   left: 52px;
   top: 50%;
@@ -1948,7 +1949,7 @@ h5 {
 }
 
 .mobile-dropdown-item.selected {
-  background-color: #DB1F1F1A;
+  background-color: #db1f1f1a;
 }
 
 .mobile-dropdown-item:hover {
@@ -2091,7 +2092,7 @@ h5 {
   left: 100%;
   width: calc(100% - 24px);
   height: 100vh;
-  background: #FFF;
+  background: #fff;
   z-index: 1000;
   transition: transform 0.3s ease;
   display: flex;
@@ -2154,11 +2155,12 @@ h5 {
 }
 
 .mobile-nav-link[aria-expanded="true"] {
-  color: #DB1F1F;
+  color: #db1f1f;
 }
 
 .mobile-nav-link[aria-expanded="true"] .icon-down {
-  filter: invert(15%) sepia(87%) saturate(4829%) hue-rotate(347deg) brightness(96%) contrast(85%);
+  filter: invert(15%) sepia(87%) saturate(4829%) hue-rotate(347deg)
+    brightness(96%) contrast(85%);
   transform: rotate(180deg);
 }
 
@@ -2212,14 +2214,14 @@ h5 {
 }
 
 .mobile-dropdown-header:before {
-  content: '';
+  content: "";
   position: absolute;
   left: 32px;
   top: 50%;
   transform: translateY(-50%) rotate(45deg);
   width: 6px;
   height: 6px;
-  background: #DB1F1F;
+  background: #db1f1f;
 }
 
 .mobile-dropdown-header.selected {
@@ -2240,7 +2242,7 @@ h5 {
 }
 
 .mobile-dropdown-item:before {
-  content: '';
+  content: "";
   position: absolute;
   left: 52px;
   top: 50%;
@@ -2252,7 +2254,7 @@ h5 {
 }
 
 .mobile-dropdown-item.selected {
-  background-color: #DB1F1F1A;
+  background-color: #db1f1f1a;
 }
 
 .mobile-dropdown-item:hover {
@@ -2483,7 +2485,7 @@ h5 {
   flex-direction: column;
   margin-bottom: 6px;
 }
-  
+
 .reviewer-avatar-bg {
   position: absolute;
   top: 0;
@@ -2504,7 +2506,7 @@ h5 {
   box-shadow: 3px 4px 30px rgba(58, 22, 22, 0.15);
   z-index: 3;
   position: absolute;
-  top: 5px
+  top: 5px;
 }
 
 .reviewer-avatar img {
@@ -2827,7 +2829,6 @@ h5 {
   /* Teaching Methods section responsive */
   .methods-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
   }
 
   .course-indicator {
@@ -3198,7 +3199,7 @@ h5 {
   /* Universal carousel arrows mobile - hide on small screens */
   .slick-prev,
   .slick-next {
-    display: none !important;
+    display: block !important;
   }
 
   /* Testimonials section mobile */
@@ -3840,7 +3841,7 @@ h5 {
     display: none;
   }
 
-  .benefit-icon img{
+  .benefit-icon img {
     width: 13px !important;
     height: 13px !important;
   }
@@ -4046,7 +4047,7 @@ h5 {
     grid-column: 1 / -1;
     order: 4;
     flex-direction: row;
-    justify-content: center;
+    /* justify-content: center; */
     gap: 20px;
   }
 
@@ -4072,24 +4073,6 @@ h5 {
     grid-template-columns: 1fr;
     gap: 25px;
     padding: 0 15px;
-  }
-
-  .footer-brand,
-  .footer-about,
-  .footer-contact {
-    text-align: center;
-  }
-
-  .footer-social {
-    justify-content: center;
-  }
-
-  .contact-item {
-    justify-content: center;
-  }
-
-  .footer-images {
-    justify-content: center;
   }
 
   .footer-title {
@@ -4188,4 +4171,200 @@ h5 {
 .accordion-button:not(.collapsed) .accordion-icon {
   background-color: #db1f1f;
   color: #fff;
+}
+
+.method-card-mobile {
+  position: relative;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 30px rgba(58, 22, 22, 0.1);
+}
+
+/* Header */
+.method-card-mobile-header {
+  padding: 16px 20px;
+  cursor: pointer;
+  background: #fff;
+}
+
+.method-card-mobile-header-img img {
+  width: 87px;
+  height: 65px;
+  object-fit: contain;
+}
+
+.method-card-mobile-title {
+  font-size: 16px;
+  font-weight: 700;
+  /* color: #252525; */
+
+  background: linear-gradient(180deg, #db1f1f 0%, #9d0b0f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Content */
+.method-card-mobile-description {
+  padding: 16px 20px 24px;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #252525;
+  text-align: justify;
+}
+
+.method-card-mobile-description p {
+  margin-bottom: 12px;
+}
+
+/* CTA button */
+.btn-method-details {
+  background: transparent;
+  border: none;
+  color: #db1f1f;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Toggle icons */
+.method-toggle-icon {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border: 1px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(50%);
+  z-index: 1;
+  box-shadow: 0 1px 6px 0 hsla(0, 75%, 49%, 0.24);
+}
+
+[aria-expanded="true"] .method-toggle-arrow {
+  transform: rotate(180deg);
+}
+
+.method-toggle-arrow {
+  width: 11px;
+  height: 6px;
+  transition: transform 0.3s ease;
+}
+
+.method-cta-mobile {
+  justify-content: center;
+  padding: 10px;
+}
+
+.partners-grid-mobile {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 4px; /* gap-x */
+  row-gap: 10px; /* gap-y */
+}
+
+.partner-logo-mobile {
+  width: 100%;
+  aspect-ratio: 86 / 36;
+}
+
+.partner-logo-mobile > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.search-icon-mobile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 99px;
+  background-color: white;
+  box-shadow: 0 0 10.8px 0 hsla(0, 75%, 49%, 0.12);
+}
+
+.search-icon-mobile.active {
+  display: none;
+}
+
+.search-icon-mobile button {
+  all: unset; /* resets default button styles */
+  cursor: pointer; /* keep pointer for UX */
+  display: flex; /* keep the flex layout */
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* Hide popup & overlay by default */
+.search-popup-mobile,
+.search-overlay {
+  display: none;
+}
+
+/* Search popup */
+.search-popup-mobile {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: translateY(100%);
+  z-index: 100;
+  width: 100%;
+  background-color: white;
+  padding: 12px 16px;
+  box-shadow: 0px 8px 17px hsla(0, 0%, 0, 0.25);
+  transition: transform 0.3s ease;
+}
+
+.search-popup-mobile.active {
+  display: block;
+}
+
+/* Search bar inside popup */
+.search-bar-mobile {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 28px;
+  box-shadow: inset 0 0 10.8px 0 hsla(0, 75%, 49%, 0.12);
+  background-color: white;
+}
+
+.search-bar-mobile > input {
+  border: none;
+  flex: 1;
+}
+
+.search-bar-mobile > input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.search-bar-mobile > img {
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+}
+
+/* Overlay */
+.search-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 90;
+  cursor: pointer;
+}
+
+.search-overlay.active {
+  display: block;
 }
