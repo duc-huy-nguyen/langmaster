@@ -325,7 +325,13 @@ h5 {
   position: relative;
   overflow: hidden;
   min-height: 715px;
-  padding: 85px 0 0 0;
+  padding-top: 20px;
+}
+
+@media (min-width: 992px) {
+  .hero-section {
+    padding-top: 85px;
+  }
 }
 
 @media (max-width: 991.98px) {
@@ -366,9 +372,37 @@ h5 {
   width: 100%;
 }
 
+.hero-sale-banner-mobile {
+  display: none;
+  order: -1;
+  width: calc(100% - 60px);
+  margin: 0 30px 24px;
+}
+
 @media (min-width: 992px) {
   .hero-sale-banner {
     display: flex;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .hero-sale-banner {
+    display: none;
+  }
+  .hero-sale-banner-mobile {
+    display: block;
+    width: calc(100% - 60px);
+    margin: 0 30px 24px;
+    order: 1;
+  }
+  .hero-sale-banner-mobile img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+  .hero-container {
+    display: flex !important;
+    flex-direction: column !important;
   }
 }
 
@@ -592,18 +626,47 @@ h5 {
   margin: 0 auto;
 }
 
+@media (max-width: 991.98px) {
+  .stats-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(2, auto);
+    gap: 24px;
+    padding: 0 10px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
 .stat-card {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 991.98px) {
+  .stat-card {
+    width: 100%;
+    max-width: 160px;
+    margin: 0 auto;
+  }
 }
 
 .stat-image {
   width: auto;
-  height: 92px;
+  height: 75px; /* Reduced from 92px */
   margin-bottom: 16px;
   object-fit: contain;
+}
+
+@media (max-width: 991.98px) {
+  .stat-image {
+    height: 55px; /* Reduced from 70px */
+    margin-bottom: 12px;
+  }
 }
 
 .stat-title {
@@ -617,10 +680,40 @@ h5 {
   text-align: center;
 }
 
+.stat-title-mobile {
+  display: none;
+}
+
+@media (max-width: 991.98px) {
+  .stat-title {
+    display: none;
+  }
+  
+  .stat-title-mobile {
+    display: block;
+    font-family: "SVN-Gilroy", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.05;
+    text-transform: uppercase;
+    color: #252525;
+    margin: 0;
+    text-align: center;
+  }
+}
+
 /* Main Content */
 .ecosystem-content {
   max-width: 1144px;
   margin: 0 auto;
+}
+
+@media (max-width: 991.98px) {
+  .ecosystem-content {
+    margin: 0;
+    max-width: none;
+    width: 100%;
+  }
 }
 
 /* Title Section */
@@ -628,8 +721,19 @@ h5 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 85px;
   position: relative;
+}
+
+@media (min-width: 992px) {
+  .ecosystem-title-section {
+    margin-bottom: 85px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .ecosystem-title-section {
+    margin-bottom: 10px !important;
+  }
 }
 
 .ecosystem-title {
@@ -641,10 +745,64 @@ h5 {
   background-clip: text;
 }
 
+.desktop-only {
+  display: block;
+}
+
+.mobile-only {
+  display: none;
+}
+
+@media (max-width: 991.98px) {
+  .desktop-only {
+    display: none;
+  }
+  
+  .mobile-only {
+    display: block;
+  }
+  
+  .ecosystem-title {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+  
+  .ecosystem-title span {
+    display: inline-block;
+  }
+
+  .ecosystem-title span:last-child {
+    white-space: nowrap;
+  }
+}
+
+.mobile-decoration {
+  display: none;
+}
+
+@media (max-width: 991.98px) {
+  .mobile-decoration {
+    display: block;
+    text-align: center;
+  }
+  
+  .mobile-decoration img {
+    width: 100%;
+    height: auto;
+  }
+}
+
 .title-decorations {
   position: relative;
   width: 100%;
   height: 18px;
+  margin-top: 14px;
+}
+
+@media (max-width: 991.98px) {
+  .title-decorations {
+    display: none !important;
+  }
 }
 
 .title-decoration-group {
@@ -700,6 +858,24 @@ h5 {
   flex: 0 0 395px;
 }
 
+@media (max-width: 991.98px) {
+  .ecosystem-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .ecosystem-left {
+    order: 2;
+  }
+
+  .ecosystem-right {
+    order: 1;
+    display: flex;
+    justify-content: center;
+  }
+}
+
 /* Benefits Card */
 .benefits-card {
   background: #fff2f2;
@@ -738,7 +914,6 @@ h5 {
 
 .benefit-text {
   font-family: "SVN-Gilroy", sans-serif;
-  font-weight: 600;
   font-size: 18px;
   line-height: 1.05;
   color: #252525;
@@ -750,12 +925,6 @@ h5 {
   height: 0;
   border-top: 1.5px dashed rgba(219, 31, 31, 0.35);
   margin: 0;
-}
-
-/* Benefits CTA */
-.benefits-cta {
-  display: flex;
-  justify-content: flex-start;
 }
 
 .btn-details {
@@ -811,9 +980,17 @@ h5 {
   gap: 20px;
 }
 
+@media (max-width: 991.98px) {
+  .course-types-grid {
+    gap: 12px;
+    padding: 0 30px;
+    width: 100vw;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+
 .course-type-card {
-  background: #ffffff url("../assets/images/white-background.png") repeat;
-  border: 1px solid #db1f1f;
   border-radius: 20px;
   padding: 0;
   position: relative;
@@ -822,24 +999,75 @@ h5 {
   box-shadow: 3px 4px 24px rgba(58, 22, 22, 0.1);
   transition: all 0.3s ease;
   cursor: pointer;
-  overflow: hidden;
 }
 
 .course-card-header {
   position: relative;
-  padding: 23px 93px 23px 36px;
+  padding: 16px 93px 16px 36px;
   display: flex;
   align-items: center;
   width: 100%;
+  border-radius: 20px;
+  background: #FFFFFF;
+}
+
+.course-type-card.course-active .course-card-header {
+  border: 1px solid #DB1F1F;
+}
+
+@media (max-width: 991.98px) {
+  .course-type-card {
+    box-shadow: none;
+  }
+
+  .course-card-header {
+    padding: 9px 16px;
+    font-size: 13px;
+    border-radius: 10px;
+  }
+
+  .course-active {
+    border: 1px solid #DB1F1F;
+  }
+}
+
+.course-card-header {
+  position: relative;
+  padding: 16px 93px 16px 36px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-radius: 20px;
+}
+
+@media (max-width: 991.98px) {
+  .course-card-header {
+    padding: 9px 16px;
+    font-size: 13px;
+    border-radius: 10px;
+  }
+  .course-active {
+    border: 1px solid #DB1F1F
+  }
+
+  .course-type-card {
+    box-shadow: none;
+  }
 }
 
 .course-type-card.course-active {
-  background: #ffffff;
-  border: 1px solid #db1f1f;
+  background: transparent;
+  border: none !important;
 }
 
 .course-type-card.course-active .course-title {
   color: #000000;
+}
+
+@media (max-width: 991.98px) {
+  .course-type-card {
+    padding: 0;
+  }
 }
 
 .course-arrow {
@@ -855,18 +1083,36 @@ h5 {
   transition: transform 0.3s ease;
 }
 
+@media (max-width: 991.98px) {
+  .course-arrow {
+    right: 20px;
+    width: 18px;
+    height: 8px;
+  }
+}
+
 .course-type-card.course-active .course-arrow {
   transform: translateY(-50%) rotate(180deg);
 }
 
 .course-title {
   font-family: "SVN-Gilroy", sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 20px;
   line-height: 1.05;
   color: #252525;
   margin: 0;
   flex: 1;
+}
+
+.course-active .course-title {
+  font-weight: 500;
+}
+
+@media (max-width: 991.98px) {
+  .course-title {
+    font-size: 13px;
+  }
 }
 
 .course-icon {
@@ -876,6 +1122,14 @@ h5 {
   position: relative;
   background: url("../assets/images/ic-bulb.svg") no-repeat center center;
   background-size: contain;
+}
+
+@media (max-width: 991.98px) {
+  .course-icon {
+    width: 13px;
+    height: 18px;
+    margin-right: 20px;
+  }
 }
 
 .course-indicator {
@@ -895,6 +1149,7 @@ h5 {
   transition: max-height 0.3s ease;
   background: #fff2f2;
   width: 100%;
+  border-radius: 8px;
 }
 
 .course-benefits.expanded {
@@ -902,11 +1157,29 @@ h5 {
   padding: 45px;
 }
 
+@media (max-width: 991.98px) {
+  .course-benefits.expanded {
+    padding: 24px;
+  }
+}
+
 .course-benefits .benefits-list {
   display: flex;
   flex-direction: column;
   gap: 19px;
   margin-bottom: 40px;
+}
+
+@media (max-width: 991.98px) {
+  .course-benefits .benefits-list {
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .benefit-item {
+    gap: 10px !important;
+  } 
+
 }
 
 .course-benefits .benefit-item {
@@ -932,11 +1205,18 @@ h5 {
 
 .course-benefits .benefit-text {
   font-family: "SVN-Gilroy", sans-serif;
-  font-weight: 600;
   font-size: 18px;
   line-height: 1.05;
   color: #252525;
   flex: 1;
+}
+
+@media (max-width: 991.98px) {
+  .course-benefits .benefit-text {
+    width: 100%;
+    font-size: 14px;
+    line-height: 1.2;
+  }
 }
 
 .course-benefits .benefit-divider {
@@ -948,7 +1228,16 @@ h5 {
 
 .course-benefits .benefits-cta {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
+  width: 100%;
+  padding: 0 45px;
+}
+
+@media (min-width: 992px) {
+  .course-benefits .benefits-cta {
+    width: calc(100% - 90px);
+    margin: 0 auto;
+  }
 }
 
 .course-benefits .btn-details {
@@ -964,6 +1253,14 @@ h5 {
   transition: all 0.3s ease;
 }
 
+@media (max-width: 991.98px) {
+  .course-benefits .btn-details {
+    padding: 8px 12px;
+    gap: 12px;
+    border-width: 3px;
+  }
+}
+
 .course-benefits .btn-details img {
   width: 30px;
   height: 16px;
@@ -975,6 +1272,12 @@ h5 {
   font-size: 20px;
   line-height: 1.15;
   color: #ffffff;
+}
+
+@media (max-width: 991.98px) {
+  .course-benefits .btn-details span {
+    font-size: 16px;
+  }
 }
 
 .course-benefits .btn-arrow {
@@ -2106,8 +2409,8 @@ h5 {
   }
 
   .ecosystem-content {
-    max-width: 95%;
-    padding: 0 20px;
+    max-width: 100%;
+    padding: 0 10px;
   }
 
   .ecosystem-grid {
@@ -2135,6 +2438,13 @@ h5 {
   .methods-grid {
     grid-template-columns: 1fr;
     gap: 40px;
+  }
+
+  .course-indicator {
+    width: 2.5px;
+    height: 16px;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   .teaching-methods-container {
@@ -2191,7 +2501,7 @@ h5 {
 
 @media (max-width: 991.98px) {
   .course-ecosystem-section {
-    padding: 60px 0;
+    padding: 30px 0;
   }
 
   .stats-section {
@@ -2203,7 +2513,7 @@ h5 {
   }
 
   .stat-image {
-    height: 70px;
+    height: 46px;
   }
 
   .stat-title {
@@ -2388,11 +2698,12 @@ h5 {
   }
 
   .course-type-card {
-    padding: 20px 60px 20px 20px;
+    padding: 0;
   }
 
   .course-title {
-    font-size: 18px;
+    font-size: 14px;
+    font-weight: 700;
   }
 
   .btn-consultation {
@@ -2720,21 +3031,24 @@ h5 {
       "avatar";
     padding: 1rem;
     gap: 0;
+    display: flex !important;
+    flex-direction: column !important;
+  }
 
   .hero-avatar-section {
     padding: 1rem;
-    order: 3;
+    order: 4;
   }
 
-  .hero-form-section {
+  .hero-right-section {
     padding: 1rem;
-    order: 2;
+    order: 3;
     justify-content: center;
   }
 
   .hero-highlights-section {
     padding: 1rem;
-    order: 1;
+    order: 2;
     justify-content: center;
     width: calc(100% - 60px);
     margin: 0 30px;
@@ -2790,6 +3104,21 @@ h5 {
   .bg-wave-top-left,
   .bg-wave-bottom-right {
     display: none;
+  }
+
+  .hero-sale-banner {
+    display: none;
+  }
+  .hero-sale-banner-mobile {
+    display: block;
+    width: calc(100% - 60px);
+    margin: 0 30px 24px;
+    order: -1;
+  }
+  .hero-sale-banner-mobile img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
   }
 }
 
@@ -3119,6 +3448,11 @@ h5 {
 
   .decoration-line {
     display: none;
+  }
+
+  .benefit-icon img{
+    width: 13px !important;
+    height: 13px !important;
   }
 }
 
