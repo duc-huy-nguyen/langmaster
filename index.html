@@ -189,9 +189,13 @@
         </ul>
 
         <div class="d-flex align-items-center navbar-actions">
-          <button class="btn btn-search d-flex align-items-center me-3" type="button">
-            <img src="assets/images/search.svg" alt="Search" class="search-icon" />
-          </button>
+          <div class="search-container d-flex align-items-center">
+            <input type="text" id="searchInputDesktop" class="search-input" placeholder="Bạn đang tìm gì...">
+
+            <button class="btn btn-search" type="button" id="searchBtnDesktop">
+              <img src="assets/images/search.svg" alt="Search" class="search-icon" />
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -624,7 +628,31 @@
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                   data-bs-target="#collapseOne">
-                  <span class="accordion-icon">1</span>
+                  <span class="accordion-icon"><svg width="26" height="27" viewBox="0 0 26 27" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M13 3.6924C13.4349 3.6924 13.7875 3.33978 13.7875 2.9049V1.7499C13.7875 1.31503 13.4349 0.962402 13 0.962402C12.5651 0.962402 12.2125 1.31503 12.2125 1.7499V2.9049C12.2125 3.33978 12.5651 3.6924 13 3.6924Z"
+                        fill="#DB1F1F" />
+                      <path
+                        d="M2.11325 13.0042H0.958246C0.523371 13.0042 0.170746 13.3568 0.170746 13.7917C0.170746 14.2265 0.523371 14.5792 0.958246 14.5792H2.11237C2.54725 14.5792 2.89987 14.2265 2.89987 13.7917C2.89987 13.3568 2.54812 13.0042 2.11325 13.0042Z"
+                        fill="#DB1F1F" />
+                      <path
+                        d="M25.0418 13.0042H23.8876C23.4528 13.0042 23.1001 13.3568 23.1001 13.7917C23.1001 14.2265 23.4528 14.5792 23.8876 14.5792H25.0418C25.4766 14.5792 25.8293 14.2265 25.8293 13.7917C25.8293 13.3568 25.4766 13.0042 25.0418 13.0042Z"
+                        fill="#DB1F1F" />
+                      <path
+                        d="M20.959 4.71974L20.1409 5.53611C19.8329 5.84411 19.8329 6.34199 20.1409 6.64999C20.2949 6.80399 20.4961 6.88099 20.6983 6.88099C20.9004 6.88099 21.1016 6.80399 21.2548 6.65086L22.0729 5.83449C22.3809 5.52649 22.3809 5.02861 22.0729 4.72061C21.7649 4.41261 21.2644 4.41261 20.959 4.71974Z"
+                        fill="#DB1F1F" />
+                      <path
+                        d="M5.85912 6.64985C6.16712 6.34185 6.16712 5.84398 5.85912 5.53598L5.041 4.7196C4.73475 4.41248 4.23512 4.41248 3.928 4.7196C3.62087 5.02673 3.62 5.52548 3.928 5.83348L4.74612 6.64985C4.89925 6.80298 5.1005 6.87998 5.30262 6.87998C5.50475 6.87998 5.70512 6.80385 5.85912 6.64985Z"
+                        fill="#DB1F1F" />
+                      <path
+                        d="M12.125 6.71209C8.97499 7.08221 6.37274 9.56371 5.87487 12.6971C5.42424 15.5338 6.62912 18.1221 8.67137 19.6542C9.24274 20.083 9.60237 20.7278 9.62337 21.4383H16.3757C16.3941 20.7322 16.7485 20.0873 17.3172 19.663C19.0786 18.347 20.2196 16.2478 20.2196 13.8801C20.2196 9.60396 16.5035 6.19671 12.125 6.71209Z"
+                        fill="#DB1F1F" />
+                      <path
+                        d="M9.63126 22.7534V22.8812C9.63126 23.8174 10.0075 24.6574 10.62 25.2612C11.2238 25.8737 12.0725 26.2499 13 26.2499C14.8638 26.2499 16.3688 24.7449 16.3688 22.8812V22.7534H9.63126Z"
+                        fill="#DB1F1F" />
+                    </svg>
+                  </span>
                   <h5 class="accordion-text">
                     16+ năm kinh nghiệm, 800.000+ học viên trên toàn cầu
                   </h5>
@@ -646,7 +674,44 @@
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                   data-bs-target="#collapseTwo">
-                  <span class="accordion-icon">2</span>
+                  <span class="accordion-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M11.2969 22.366V18.2812H8.10397C8.54994 19.5215 9.12233 20.5859 9.81786 21.3492C10.2934 21.8712 10.7919 22.2009 11.2969 22.366Z"
+                        fill="white" />
+                      <path d="M11.2969 11.25H7.10113C7.04071 13.2433 7.24677 15.1744 7.67703 16.875H11.2969V11.25Z"
+                        fill="white" />
+                      <path
+                        d="M17.7844 16.875H22.8803C23.5631 15.372 24 13.7088 24 11.9531V11.25H18.3061C18.3649 13.2317 18.1857 15.1512 17.7844 16.875Z"
+                        fill="white" />
+                      <path
+                        d="M15.896 18.2812H12.7031V22.366C13.2081 22.2009 13.7066 21.8712 14.1822 21.3492C14.8777 20.5859 15.45 19.5215 15.896 18.2812Z"
+                        fill="white" />
+                      <path
+                        d="M17.3878 18.2812C16.8616 19.9028 16.1346 21.2942 15.2218 22.296C14.4597 23.1322 13.5994 23.7701 12.7032 23.9503V24C16.6743 23.7672 20.1242 21.4654 22.1222 18.2812H17.3878Z"
+                        fill="white" />
+                      <path d="M16.8989 11.25H12.7031V16.875H16.323C16.7532 15.1744 16.9593 13.2433 16.8989 11.25Z"
+                        fill="white" />
+                      <path
+                        d="M11.2969 23.9503C10.4006 23.7701 9.54032 23.1322 8.77827 22.296C7.86548 21.2941 7.13849 19.9027 6.61227 18.2812H1.8779C3.87585 21.4653 7.32576 23.7672 11.2969 24V23.9503Z"
+                        fill="white" />
+                      <path
+                        d="M6.21562 16.875C5.81428 15.1512 5.63517 13.2317 5.69386 11.25H0V11.9531C0 13.7088 0.436875 15.372 1.11966 16.875H6.21562Z"
+                        fill="white" />
+                      <path
+                        d="M12 7.03125C13.9416 7.03125 15.5156 5.45725 15.5156 3.51562C15.5156 1.574 13.9416 0 12 0C10.0584 0 8.48438 1.574 8.48438 3.51562C8.48438 5.45725 10.0584 7.03125 12 7.03125Z"
+                        fill="white" />
+                      <path
+                        d="M4.26562 7.03125C5.81893 7.03125 7.07812 5.77205 7.07812 4.21875C7.07812 2.66545 5.81893 1.40625 4.26562 1.40625C2.71232 1.40625 1.45312 2.66545 1.45312 4.21875C1.45312 5.77205 2.71232 7.03125 4.26562 7.03125Z"
+                        fill="white" />
+                      <path
+                        d="M19.7344 7.03125C21.2877 7.03125 22.5469 5.77205 22.5469 4.21875C22.5469 2.66545 21.2877 1.40625 19.7344 1.40625C18.1811 1.40625 16.9219 2.66545 16.9219 4.21875C16.9219 5.77205 18.1811 7.03125 19.7344 7.03125Z"
+                        fill="white" />
+                      <path
+                        d="M23.694 9.84375C23.1116 8.21039 21.5652 7.03125 19.7344 7.03125C18.1578 7.03125 16.7971 7.91039 16.073 9.19472C15.1867 7.89042 13.692 7.03125 12 7.03125C10.308 7.03125 8.8133 7.89052 7.92698 9.19472C7.20291 7.91048 5.84208 7.03125 4.26562 7.03125C2.43478 7.03125 0.888375 8.21039 0.306 9.84375H23.694Z"
+                        fill="white" />
+                    </svg>
+                  </span>
                   <h5 class="accordion-text">
                     Lộ trình học chuẩn quốc tế, bám sát nhu cầu học viên
                   </h5>
@@ -663,7 +728,29 @@
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                   data-bs-target="#collapseThree">
-                  <span class="accordion-icon">3</span>
+                  <span class="accordion-icon"><svg width="29" height="28" viewBox="0 0 29 28" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_52_1742)">
+                        <path
+                          d="M19.139 19.6231L20.4651 17.5454L22.8583 16.7573L23.1235 14.3305L24.924 12.619L24.0679 10.3218L24.924 8.02457L23.1235 6.31312L22.8584 3.88631L20.4652 3.09827L19.1391 1.02052L16.6307 1.31294L14.5 0L12.3692 1.31305L9.86095 1.02063L8.53482 3.09832L6.14164 3.88637L5.87651 6.31318L4.07596 8.02462L4.93202 10.3219L4.07596 12.6191L5.87645 14.3305L6.14159 16.7574L8.53476 17.5454L9.86089 19.6231L12.3692 19.3308L14.5 20.6438L16.6307 19.3308L19.139 19.6231ZM7.16905 10.3219C7.16905 6.419 10.4577 3.24373 14.5 3.24373C18.5423 3.24373 21.8309 6.419 21.8309 10.3219C21.8309 14.2248 18.5423 17.4 14.5 17.4C10.4577 17.4 7.16905 14.2248 7.16905 10.3219Z"
+                          fill="#DB1F1F" />
+                        <path
+                          d="M14.5 4.8855C11.3952 4.8855 8.86935 7.32429 8.86935 10.322C8.86935 13.3197 11.3952 15.7585 14.5 15.7585C17.6048 15.7585 20.1306 13.3197 20.1306 10.322C20.1306 7.32429 17.6048 4.8855 14.5 4.8855Z"
+                          fill="#DB1F1F" />
+                        <path
+                          d="M11.9681 21.0311L8.98427 21.3789L7.40779 18.9088L6.87185 18.7324L4.56018 25.7087L8.72185 25.4877L11.9778 28L13.8939 22.2178L11.9681 21.0311Z"
+                          fill="#DB1F1F" />
+                        <path
+                          d="M21.5922 18.9089L20.0157 21.3789L17.0319 21.0311L15.1061 22.2178L17.0221 28L20.2781 25.4877L24.4398 25.7087L22.1281 18.7324L21.5922 18.9089Z"
+                          fill="#DB1F1F" />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_52_1742">
+                          <rect width="29" height="28" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </span>
                   <h5 class="accordion-text">
                     Cam kết đầu ra chuẩn CEFR (hoặc IELTS 6.5+)
                   </h5>
@@ -680,7 +767,29 @@
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                   data-bs-target="#collapseFour">
-                  <span class="accordion-icon">4</span>
+                  <span class="accordion-icon"><svg width="29" height="28" viewBox="0 0 29 28" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_52_1742)">
+                        <path
+                          d="M19.139 19.6231L20.4651 17.5454L22.8583 16.7573L23.1235 14.3305L24.924 12.619L24.0679 10.3218L24.924 8.02457L23.1235 6.31312L22.8584 3.88631L20.4652 3.09827L19.1391 1.02052L16.6307 1.31294L14.5 0L12.3692 1.31305L9.86095 1.02063L8.53482 3.09832L6.14164 3.88637L5.87651 6.31318L4.07596 8.02462L4.93202 10.3219L4.07596 12.6191L5.87645 14.3305L6.14159 16.7574L8.53476 17.5454L9.86089 19.6231L12.3692 19.3308L14.5 20.6438L16.6307 19.3308L19.139 19.6231ZM7.16905 10.3219C7.16905 6.419 10.4577 3.24373 14.5 3.24373C18.5423 3.24373 21.8309 6.419 21.8309 10.3219C21.8309 14.2248 18.5423 17.4 14.5 17.4C10.4577 17.4 7.16905 14.2248 7.16905 10.3219Z"
+                          fill="#DB1F1F" />
+                        <path
+                          d="M14.5 4.8855C11.3952 4.8855 8.86935 7.32429 8.86935 10.322C8.86935 13.3197 11.3952 15.7585 14.5 15.7585C17.6048 15.7585 20.1306 13.3197 20.1306 10.322C20.1306 7.32429 17.6048 4.8855 14.5 4.8855Z"
+                          fill="#DB1F1F" />
+                        <path
+                          d="M11.9681 21.0311L8.98427 21.3789L7.40779 18.9088L6.87185 18.7324L4.56018 25.7087L8.72185 25.4877L11.9778 28L13.8939 22.2178L11.9681 21.0311Z"
+                          fill="#DB1F1F" />
+                        <path
+                          d="M21.5922 18.9089L20.0157 21.3789L17.0319 21.0311L15.1061 22.2178L17.0221 28L20.2781 25.4877L24.4398 25.7087L22.1281 18.7324L21.5922 18.9089Z"
+                          fill="#DB1F1F" />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_52_1742">
+                          <rect width="29" height="28" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </span>
                   <h5 class="accordion-text">
                     100% giáo viên chuẩn Quốc tế, đào tạo 5 bước khắt khe
                   </h5>
@@ -705,7 +814,29 @@
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                   data-bs-target="#collapseFive">
-                  <span class="accordion-icon">5</span>
+                  <span class="accordion-icon"><svg width="29" height="29" viewBox="0 0 29 29" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_52_1714)">
+                        <path
+                          d="M28.1502 27.3008C6.1868 27.3008 6.34958 27.3008 0.849609 27.3008C0.380002 27.3008 0 27.6808 0 28.1504C0 28.62 0.380002 29 0.849609 29H28.1502C28.6198 29 28.9998 28.62 28.9998 28.1504C28.9998 27.6808 28.6198 27.3008 28.1502 27.3008Z"
+                          fill="#DB1F1F" />
+                        <path
+                          d="M7.75971 18.8047H2.54883C2.07922 18.8047 1.69922 19.1847 1.69922 19.6543V25.6015H8.60932V19.6543C8.60932 19.1847 8.22932 18.8047 7.75971 18.8047Z"
+                          fill="#DB1F1F" />
+                        <path
+                          d="M16.2557 13.707H11.1581C10.6885 13.707 10.3085 14.087 10.3085 14.5566V25.6015H17.1053V14.5566C17.1053 14.087 16.7253 13.707 16.2557 13.707Z"
+                          fill="#DB1F1F" />
+                        <path
+                          d="M28.7509 7.04571L22.8036 0.248893C22.4718 -0.0829644 21.9341 -0.0829644 21.6022 0.248893L15.655 7.04571C15.4119 7.28881 15.3389 7.65386 15.4708 7.97167C15.6019 8.28943 15.9122 8.49605 16.2557 8.49605H18.8045V25.6014H25.6014V8.49605H28.1502C28.4937 8.49605 28.804 8.28948 28.9351 7.97167C29.067 7.65392 28.994 7.28881 28.7509 7.04571Z"
+                          fill="#DB1F1F" />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_52_1714">
+                          <rect width="29" height="29" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </span>
                   <h5 class="accordion-text">
                     Phương pháp học linh hoạt, kết hợp trực tuyến và trực tiếp
                   </h5>
@@ -722,7 +853,20 @@
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                   data-bs-target="#collapseSix">
-                  <span class="accordion-icon">6</span>
+                  <span class="accordion-icon"><svg width="26" height="27" viewBox="0 0 26 27" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_52_1712)">
+                        <path
+                          d="M17.8263 15.1743L16.7579 16.2837L14.8155 14.2667C16.0276 12.7569 16.7578 10.8158 16.7578 8.70117C16.7578 3.9034 12.999 0 8.37891 0C3.75883 0 0 3.9034 0 8.70117C0 13.4989 3.75883 17.4023 8.37891 17.4023C10.4152 17.4023 12.2844 16.644 13.7383 15.3853L15.6807 17.4024L14.595 18.5298L22.7688 27L26 23.644L17.8263 15.1743ZM6.85547 12.9837L3.2698 9.26068L4.34738 8.14166L6.85547 10.7467L12.4104 4.9776L13.488 6.09662L6.85547 12.9837Z"
+                          fill="#DB1F1F" />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_52_1712">
+                          <rect width="26" height="27" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </span>
                   <h5 class="accordion-text">
                     Ứng dụng công nghệ AI và học liệu số hiện đại
                   </h5>
@@ -739,7 +883,13 @@
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                   data-bs-target="#collapseSeven">
-                  <span class="accordion-icon">7</span>
+                  <span class="accordion-icon"><svg width="22" height="25" viewBox="0 0 22 25" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M19.4294 0.314453H7.43362C6.7521 0.315202 6.09871 0.586265 5.6168 1.06817C5.1349 1.55008 4.86383 2.20347 4.86308 2.88499V18.351C4.86383 19.0325 5.1349 19.6859 5.6168 20.1678C6.09871 20.6497 6.7521 20.9208 7.43362 20.9216H19.4294C20.111 20.9208 20.7643 20.6497 21.2462 20.1678C21.7282 19.6859 21.9992 19.0325 22 18.351V2.88499C21.9992 2.20347 21.7282 1.55008 21.2462 1.06817C20.7643 0.586265 20.111 0.315202 19.4294 0.314453ZM17.7157 16.5945H9.1473C8.92006 16.5945 8.70211 16.5042 8.54142 16.3435C8.38073 16.1828 8.29046 15.9649 8.29046 15.7376C8.29046 15.5104 8.38073 15.2925 8.54142 15.1318C8.70211 14.9711 8.92006 14.8808 9.1473 14.8808H17.7157C17.943 14.8808 18.1609 14.9711 18.3216 15.1318C18.4823 15.2925 18.5726 15.5104 18.5726 15.7376C18.5726 15.9649 18.4823 16.1828 18.3216 16.3435C18.1609 16.5042 17.943 16.5945 17.7157 16.5945ZM17.7157 13.1671H9.1473C8.92006 13.1671 8.70211 13.0768 8.54142 12.9162C8.38073 12.7555 8.29046 12.5375 8.29046 12.3103C8.29046 12.083 8.38073 11.8651 8.54142 11.7044C8.70211 11.5437 8.92006 11.4534 9.1473 11.4534H17.7157C17.943 11.4534 18.1609 11.5437 18.3216 11.7044C18.4823 11.8651 18.5726 12.083 18.5726 12.3103C18.5726 12.5375 18.4823 12.7555 18.3216 12.9162C18.1609 13.0768 17.943 13.1671 17.7157 13.1671ZM17.7157 9.73974H9.1473C8.92006 9.73974 8.70211 9.64946 8.54142 9.48878C8.38073 9.32809 8.29046 9.11014 8.29046 8.88289C8.29046 8.65565 8.38073 8.4377 8.54142 8.27701C8.70211 8.11633 8.92006 8.02605 9.1473 8.02605H17.7157C17.943 8.02605 18.1609 8.11633 18.3216 8.27701C18.4823 8.4377 18.5726 8.65565 18.5726 8.88289C18.5726 9.11014 18.4823 9.32809 18.3216 9.48878C18.1609 9.64946 17.943 9.73974 17.7157 9.73974ZM17.7157 6.31236H9.1473C8.92006 6.31236 8.70211 6.22209 8.54142 6.0614C8.38073 5.90071 8.29046 5.68277 8.29046 5.45552C8.29046 5.22827 8.38073 5.01033 8.54142 4.84964C8.70211 4.68895 8.92006 4.59867 9.1473 4.59867H17.7157C17.943 4.59867 18.1609 4.68895 18.3216 4.84964C18.4823 5.01033 18.5726 5.22827 18.5726 5.45552C18.5726 5.68277 18.4823 5.90071 18.3216 6.0614C18.1609 6.22209 17.943 6.31236 17.7157 6.31236ZM17.6892 22.6352C16.9059 22.8698 6.08374 24.1451 5.39193 24.2845C4.71681 24.3678 4.03602 24.1821 3.49675 23.7675C2.95747 23.3529 2.60305 22.7426 2.5101 22.0688L0.505689 6.73282C0.463293 6.3616 0.500221 5.98561 0.614031 5.62973C0.72784 5.27386 0.915934 4.94621 1.16586 4.66848C1.41579 4.39075 1.72186 4.16927 2.06381 4.0187C2.40575 3.86812 2.77578 3.79189 3.1494 3.79504V18.351C3.15073 19.4869 3.60254 20.5758 4.40569 21.3789C5.20885 22.1821 6.29778 22.6339 7.43362 22.6352H17.6892Z"
+                        fill="#DB1F1F" />
+                    </svg>
+                  </span>
                   <h5 class="accordion-text">
                     Cộng đồng học viên rộng lớn, hỗ trợ 24/7
                   </h5>
@@ -756,7 +906,20 @@
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                   data-bs-target="#collapseEight">
-                  <span class="accordion-icon">8</span>
+                  <span class="accordion-icon"><svg width="27" height="26" viewBox="0 0 27 26" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_52_1692)">
+                        <path
+                          d="M13.5 0C10.83 0 8.21987 0.762437 5.99981 2.1909C3.77974 3.61935 2.04942 5.64968 1.02763 8.02512C0.00584931 10.4006 -0.261496 13.0144 0.259405 15.5362C0.780305 18.0579 2.06606 20.3743 3.95406 22.1924C5.84207 24.0105 8.24754 25.2486 10.8663 25.7502C13.485 26.2518 16.1994 25.9944 18.6662 25.0104C21.133 24.0265 23.2414 22.3603 24.7248 20.2224C26.2082 18.0846 27 15.5712 27 13C27 9.55219 25.5777 6.24559 23.0459 3.80761C20.5142 1.36964 17.0804 0 13.5 0ZM5.09093 10.477C5.38402 8.42434 6.83882 6.86947 8.59027 6.86947C10.3417 6.86947 11.7876 8.42776 12.0896 10.477C12.0934 10.5018 12.0883 10.5272 12.0751 10.5489C12.062 10.5706 12.0416 10.5874 12.0173 10.5965C11.993 10.6057 11.9662 10.6066 11.9412 10.5992C11.9163 10.5917 11.8947 10.5764 11.88 10.5557C11.5161 10.0357 11.0267 9.60839 10.4538 9.31047C9.88081 9.01256 9.24137 8.85288 8.59027 8.84513C7.93917 8.85288 7.29973 9.01256 6.72676 9.31047C6.1538 9.60839 5.6644 10.0357 5.30053 10.5557C5.28581 10.5764 5.26423 10.5917 5.2393 10.5992C5.21437 10.6066 5.18757 10.6057 5.16325 10.5965C5.13894 10.5874 5.11856 10.5706 5.10542 10.5489C5.09229 10.5272 5.08718 10.5018 5.09093 10.477ZM21.6444 15.6958C21.3438 17.5679 20.3575 19.2746 18.864 20.5076C17.3704 21.7405 15.4681 22.4182 13.5009 22.4182C11.5337 22.4182 9.63137 21.7405 8.13782 20.5076C6.64427 19.2746 5.65803 17.5679 5.35737 15.6958C5.33794 15.5741 5.34602 15.4498 5.38107 15.3314C5.41612 15.2129 5.47731 15.1032 5.56046 15.0097C5.64361 14.9161 5.74675 14.841 5.86284 14.7893C5.97893 14.7377 6.10523 14.7108 6.2331 14.7105H20.7669C20.8949 14.7106 21.0214 14.7373 21.1377 14.7888C21.254 14.8403 21.3574 14.9154 21.4408 15.009C21.5241 15.1026 21.5854 15.2124 21.6206 15.3309C21.6557 15.4495 21.6639 15.5739 21.6444 15.6958ZM21.5858 10.5557C21.2272 10.032 20.7393 9.60221 20.1657 9.30484C19.5922 9.00747 18.951 8.8518 18.2996 8.8518C17.6482 8.8518 17.007 9.00747 16.4335 9.30484C15.8599 9.60221 15.372 10.032 15.0134 10.5557C14.9987 10.5764 14.9771 10.5917 14.9522 10.5992C14.9273 10.6066 14.9005 10.6057 14.8761 10.5965C14.8518 10.5874 14.8315 10.5706 14.8183 10.5489C14.8052 10.5272 14.8001 10.5018 14.8038 10.477C15.0987 8.42434 16.5517 6.86947 18.3032 6.86947C20.0546 6.86947 21.5005 8.42776 21.8025 10.477C21.8133 10.5046 21.8123 10.5353 21.7997 10.5623C21.787 10.5892 21.7637 10.6102 21.735 10.6207C21.7063 10.6311 21.6744 10.6301 21.6464 10.6179C21.6184 10.6057 21.5966 10.5833 21.5858 10.5557Z"
+                          fill="#DB1F1F" />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_52_1692">
+                          <rect width="27" height="26" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </span>
                   <h5 class="accordion-text">
                     Học phí hợp lý, nhiều ưu đãi linh hoạt
                   </h5>
@@ -1043,17 +1206,8 @@
 
               <div class="teacher-qualification">
                 <div class="qualification-icon">
-                  <svg width="17" height="17" viewBox="0 0 17 17" fill="none">
-                    <circle cx="8.5" cy="8.5" r="8.5" fill="url(#qualification-gradient)" />
-                    <path d="M12.75 6.5L7.25 12L4.25 9" stroke="white" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                    <defs>
-                      <linearGradient id="qualification-gradient" x1="32%" y1="28%" x2="83%" y2="76%">
-                        <stop offset="0%" style="stop-color: #d31818" stop-opacity="0.7" />
-                        <stop offset="100%" style="stop-color: #d31818" stop-opacity="0" />
-                      </linearGradient>
-                    </defs>
-                  </svg>
+
+                  <img src="assets/images/ic-check-red.svg" alt="" />
                 </div>
                 <span class="qualification-text">Thạc sĩ ngành Phương pháp Giảng dạy tại Đại học Ngoại
                   Ngữ</span>
@@ -1061,17 +1215,7 @@
 
               <div class="teacher-experience">
                 <div class="experience-icon">
-                  <svg width="17" height="17" viewBox="0 0 17 17" fill="none">
-                    <circle cx="8.5" cy="8.5" r="8.5" fill="url(#experience-gradient)" />
-                    <path d="M12.75 6.5L7.25 12L4.25 9" stroke="white" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                    <defs>
-                      <linearGradient id="experience-gradient" x1="32%" y1="28%" x2="83%" y2="76%">
-                        <stop offset="0%" style="stop-color: #d31818" stop-opacity="0.7" />
-                        <stop offset="100%" style="stop-color: #d31818" stop-opacity="0" />
-                      </linearGradient>
-                    </defs>
-                  </svg>
+                  <img src="assets/images/ic-check-red.svg" alt="" />
                 </div>
                 <span class="experience-text">5+ năm kinh nghiệm giảng dạy và đào tạo tiếng Anh</span>
               </div>
@@ -1109,34 +1253,14 @@
 
               <div class="teacher-qualification">
                 <div class="qualification-icon">
-                  <svg width="17" height="17" viewBox="0 0 17 17" fill="none">
-                    <circle cx="8.5" cy="8.5" r="8.5" fill="url(#qualification-gradient-2)" />
-                    <path d="M12.75 6.5L7.25 12L4.25 9" stroke="white" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                    <defs>
-                      <linearGradient id="qualification-gradient-2" x1="32%" y1="28%" x2="83%" y2="76%">
-                        <stop offset="0%" style="stop-color: #d31818" stop-opacity="0.7" />
-                        <stop offset="100%" style="stop-color: #d31818" stop-opacity="0" />
-                      </linearGradient>
-                    </defs>
-                  </svg>
+                  <img src="assets/images/ic-check-red.svg" alt="" />
                 </div>
                 <span class="qualification-text">Cử nhân Ngôn Ngữ Anh – Học viện Ngoại Giao</span>
               </div>
 
               <div class="teacher-experience">
                 <div class="experience-icon">
-                  <svg width="17" height="17" viewBox="0 0 17 17" fill="none">
-                    <circle cx="8.5" cy="8.5" r="8.5" fill="url(#experience-gradient-2)" />
-                    <path d="M12.75 6.5L7.25 12L4.25 9" stroke="white" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                    <defs>
-                      <linearGradient id="experience-gradient-2" x1="32%" y1="28%" x2="83%" y2="76%">
-                        <stop offset="0%" style="stop-color: #d31818" stop-opacity="0.7" />
-                        <stop offset="100%" style="stop-color: #d31818" stop-opacity="0" />
-                      </linearGradient>
-                    </defs>
-                  </svg>
+                  <img src="assets/images/ic-check-red.svg" alt="" />
                 </div>
                 <span class="experience-text">Học bổng 13.000$ Đại Học Macquarie – Úc cho Chương trình
                   Master of Applied Linguistics and Tesol</span>
@@ -1175,51 +1299,21 @@
 
               <div class="teacher-qualification">
                 <div class="qualification-icon">
-                  <svg width="17" height="17" viewBox="0 0 17 17" fill="none">
-                    <circle cx="8.5" cy="8.5" r="8.5" fill="url(#qualification-gradient-3)" />
-                    <path d="M12.75 6.5L7.25 12L4.25 9" stroke="white" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                    <defs>
-                      <linearGradient id="qualification-gradient-3" x1="32%" y1="28%" x2="83%" y2="76%">
-                        <stop offset="0%" style="stop-color: #d31818" stop-opacity="0.7" />
-                        <stop offset="100%" style="stop-color: #d31818" stop-opacity="0" />
-                      </linearGradient>
-                    </defs>
-                  </svg>
+                  <img src="assets/images/ic-check-red.svg" alt="" />
                 </div>
                 <span class="qualification-text">Cử nhân Ngôn Ngữ Anh – ĐH Ngoại ngữ</span>
               </div>
 
               <div class="teacher-experience">
                 <div class="experience-icon">
-                  <svg width="17" height="17" viewBox="0 0 17 17" fill="none">
-                    <circle cx="8.5" cy="8.5" r="8.5" fill="url(#experience-gradient-3)" />
-                    <path d="M12.75 6.5L7.25 12L4.25 9" stroke="white" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                    <defs>
-                      <linearGradient id="experience-gradient-3" x1="32%" y1="28%" x2="83%" y2="76%">
-                        <stop offset="0%" style="stop-color: #d31818" stop-opacity="0.7" />
-                        <stop offset="100%" style="stop-color: #d31818" stop-opacity="0" />
-                      </linearGradient>
-                    </defs>
-                  </svg>
+                  <img src="assets/images/ic-check-red.svg" alt="" />
                 </div>
                 <span class="experience-text">Cử nhân Đại học Thương Mại</span>
               </div>
 
               <div class="teacher-additional">
                 <div class="additional-icon">
-                  <svg width="17" height="17" viewBox="0 0 17 17" fill="none">
-                    <circle cx="8.5" cy="8.5" r="8.5" fill="url(#additional-gradient)" />
-                    <path d="M12.75 6.5L7.25 12L4.25 9" stroke="white" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                    <defs>
-                      <linearGradient id="additional-gradient" x1="32%" y1="28%" x2="83%" y2="76%">
-                        <stop offset="0%" style="stop-color: #d31818" stop-opacity="0.7" />
-                        <stop offset="100%" style="stop-color: #d31818" stop-opacity="0" />
-                      </linearGradient>
-                    </defs>
-                  </svg>
+                  <img src="assets/images/ic-check-red.svg" alt="" />
                 </div>
                 <span class="additional-text">6+ năm kinh nghiệm giảng dạy tại Langmaster</span>
               </div>
@@ -1257,34 +1351,14 @@
 
               <div class="teacher-qualification">
                 <div class="qualification-icon">
-                  <svg width="17" height="17" viewBox="0 0 17 17" fill="none">
-                    <circle cx="8.5" cy="8.5" r="8.5" fill="url(#qualification-gradient-4)" />
-                    <path d="M12.75 6.5L7.25 12L4.25 9" stroke="white" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                    <defs>
-                      <linearGradient id="qualification-gradient-4" x1="32%" y1="28%" x2="83%" y2="76%">
-                        <stop offset="0%" style="stop-color: #d31818" stop-opacity="0.7" />
-                        <stop offset="100%" style="stop-color: #d31818" stop-opacity="0" />
-                      </linearGradient>
-                    </defs>
-                  </svg>
+                  <img src="assets/images/ic-check-red.svg" alt="" />
                 </div>
                 <span class="qualification-text">Thạc sĩ Ngôn Ngữ Anh – Đại học Cambridge</span>
               </div>
 
               <div class="teacher-experience">
                 <div class="experience-icon">
-                  <svg width="17" height="17" viewBox="0 0 17 17" fill="none">
-                    <circle cx="8.5" cy="8.5" r="8.5" fill="url(#experience-gradient-4)" />
-                    <path d="M12.75 6.5L7.25 12L4.25 9" stroke="white" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                    <defs>
-                      <linearGradient id="experience-gradient-4" x1="32%" y1="28%" x2="83%" y2="76%">
-                        <stop offset="0%" style="stop-color: #d31818" stop-opacity="0.7" />
-                        <stop offset="100%" style="stop-color: #d31818" stop-opacity="0" />
-                      </linearGradient>
-                    </defs>
-                  </svg>
+                  <img src="assets/images/ic-check-red.svg" alt="" />
                 </div>
                 <span class="experience-text">8+ năm kinh nghiệm giảng dạy IELTS và tiếng Anh
                   Academic</span>
@@ -1323,51 +1397,21 @@
 
               <div class="teacher-qualification">
                 <div class="qualification-icon">
-                  <svg width="17" height="17" viewBox="0 0 17 17" fill="none">
-                    <circle cx="8.5" cy="8.5" r="8.5" fill="url(#qualification-gradient-5)" />
-                    <path d="M12.75 6.5L7.25 12L4.25 9" stroke="white" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                    <defs>
-                      <linearGradient id="qualification-gradient-5" x1="32%" y1="28%" x2="83%" y2="76%">
-                        <stop offset="0%" style="stop-color: #d31818" stop-opacity="0.7" />
-                        <stop offset="100%" style="stop-color: #d31818" stop-opacity="0" />
-                      </linearGradient>
-                    </defs>
-                  </svg>
+                  <img src="assets/images/ic-check-red.svg" alt="" />
                 </div>
                 <span class="qualification-text">Cử nhân Ngôn Ngữ Anh – Đại học Quốc gia Hà Nội</span>
               </div>
 
               <div class="teacher-experience">
                 <div class="experience-icon">
-                  <svg width="17" height="17" viewBox="0 0 17 17" fill="none">
-                    <circle cx="8.5" cy="8.5" r="8.5" fill="url(#experience-gradient-5)" />
-                    <path d="M12.75 6.5L7.25 12L4.25 9" stroke="white" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                    <defs>
-                      <linearGradient id="experience-gradient-5" x1="32%" y1="28%" x2="83%" y2="76%">
-                        <stop offset="0%" style="stop-color: #d31818" stop-opacity="0.7" />
-                        <stop offset="100%" style="stop-color: #d31818" stop-opacity="0" />
-                      </linearGradient>
-                    </defs>
-                  </svg>
+                  <img src="assets/images/ic-check-red.svg" alt="" />
                 </div>
                 <span class="experience-text">Chuyên gia đào tạo TOEFL và English for Business</span>
               </div>
 
               <div class="teacher-additional">
                 <div class="additional-icon">
-                  <svg width="17" height="17" viewBox="0 0 17 17" fill="none">
-                    <circle cx="8.5" cy="8.5" r="8.5" fill="url(#additional-gradient-5)" />
-                    <path d="M12.75 6.5L7.25 12L4.25 9" stroke="white" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                    <defs>
-                      <linearGradient id="additional-gradient-5" x1="32%" y1="28%" x2="83%" y2="76%">
-                        <stop offset="0%" style="stop-color: #d31818" stop-opacity="0.7" />
-                        <stop offset="100%" style="stop-color: #d31818" stop-opacity="0" />
-                      </linearGradient>
-                    </defs>
-                  </svg>
+                  <img src="assets/images/ic-check-red.svg" alt="" />
                 </div>
                 <span class="additional-text">4+ năm kinh nghiệm giảng dạy tại các trường quốc tế</span>
               </div>
@@ -1380,16 +1424,7 @@
           <div class="teacher-card">
             <div class="teacher-card-inner">
               <div class="teacher-crown">
-                <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
-                  <path d="M15 2L12 8L6 6L9 12L3 15L9 18L6 24L12 22L15 28L18 22L24 24L21 18L27 15L21 12L24 6L18 8L15 2Z"
-                    fill="url(#crown-gradient-6)" />
-                  <defs>
-                    <linearGradient id="crown-gradient-6" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" style="stop-color: #fae361" />
-                      <stop offset="100%" style="stop-color: #ffbf54" />
-                    </linearGradient>
-                  </defs>
-                </svg>
+                <img src="assets/images/ic-check-red.svg" alt="" />
               </div>
 
               <div class="teacher-image">
@@ -1404,51 +1439,21 @@
 
               <div class="teacher-qualification">
                 <div class="qualification-icon">
-                  <svg width="17" height="17" viewBox="0 0 17 17" fill="none">
-                    <circle cx="8.5" cy="8.5" r="8.5" fill="url(#qualification-gradient-6)" />
-                    <path d="M12.75 6.5L7.25 12L4.25 9" stroke="white" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                    <defs>
-                      <linearGradient id="qualification-gradient-6" x1="32%" y1="28%" x2="83%" y2="76%">
-                        <stop offset="0%" style="stop-color: #d31818" stop-opacity="0.7" />
-                        <stop offset="100%" style="stop-color: #d31818" stop-opacity="0" />
-                      </linearGradient>
-                    </defs>
-                  </svg>
+                  <img src="assets/images/ic-check-red.svg" alt="" />
                 </div>
                 <span class="qualification-text">Thạc sĩ Giáo dục – Đại học Melbourne, Úc</span>
               </div>
 
               <div class="teacher-experience">
                 <div class="experience-icon">
-                  <svg width="17" height="17" viewBox="0 0 17 17" fill="none">
-                    <circle cx="8.5" cy="8.5" r="8.5" fill="url(#experience-gradient-6)" />
-                    <path d="M12.75 6.5L7.25 12L4.25 9" stroke="white" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                    <defs>
-                      <linearGradient id="experience-gradient-6" x1="32%" y1="28%" x2="83%" y2="76%">
-                        <stop offset="0%" style="stop-color: #d31818" stop-opacity="0.7" />
-                        <stop offset="100%" style="stop-color: #d31818" stop-opacity="0" />
-                      </linearGradient>
-                    </defs>
-                  </svg>
+                  <img src="assets/images/ic-check-red.svg" alt="" />
                 </div>
                 <span class="experience-text">Giảng viên chính khóa IELTS Foundation và Pre-IELTS</span>
               </div>
 
               <div class="teacher-additional">
                 <div class="additional-icon">
-                  <svg width="17" height="17" viewBox="0 0 17 17" fill="none">
-                    <circle cx="8.5" cy="8.5" r="8.5" fill="url(#additional-gradient-6)" />
-                    <path d="M12.75 6.5L7.25 12L4.25 9" stroke="white" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                    <defs>
-                      <linearGradient id="additional-gradient-6" x1="32%" y1="28%" x2="83%" y2="76%">
-                        <stop offset="0%" style="stop-color: #d31818" stop-opacity="0.7" />
-                        <stop offset="100%" style="stop-color: #d31818" stop-opacity="0" />
-                      </linearGradient>
-                    </defs>
-                  </svg>
+                  <img src="assets/images/ic-check-red.svg" alt="" />
                 </div>
                 <span class="additional-text">7+ năm kinh nghiệm giảng dạy tại Langmaster</span>
               </div>
@@ -1489,7 +1494,7 @@
         <!-- Success Stories Carousel -->
         <div class="success-stories-carousel">
           <!-- Video Card 1 -->
-          <div class="video-card" data-youtube-url="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+          <div class="video-card" data-youtube-url="https://www.youtube.com/watch?v=jNQXAC9IVRw">
             <div class="video-thumbnail">
               <img src="assets/images/video-thumbnail-1.png" alt="Success Story 1" />
               <div class="play-button">
@@ -1500,7 +1505,7 @@
           </div>
 
           <!-- Video Card 2 -->
-          <div class="video-card" data-youtube-url="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+          <div class="video-card" data-youtube-url="https://www.youtube.com/watch?v=9bZkp7q19f0">
             <div class="video-thumbnail">
               <img src="assets/images/video-thumbnail-2.png" alt="Success Story 2" />
               <div class="play-button">
@@ -1511,7 +1516,7 @@
           </div>
 
           <!-- Video Card 3 -->
-          <div class="video-card" data-youtube-url="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+          <div class="video-card" data-youtube-url="https://www.youtube.com/watch?v=kJQP7kiw5Fk">
             <div class="video-thumbnail">
               <img src="assets/images/video-thumbnail-3.png" alt="Success Story 3" />
               <div class="play-button">
@@ -1522,7 +1527,7 @@
           </div>
 
           <!-- Video Card 4 -->
-          <div class="video-card" data-youtube-url="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+          <div class="video-card" data-youtube-url="https://www.youtube.com/watch?v=YQHsXMglC9A">
             <div class="video-thumbnail">
               <img src="assets/images/video-thumbnail-1.png" alt="Success Story 4" />
               <div class="play-button">
@@ -1533,7 +1538,7 @@
           </div>
 
           <!-- Video Card 5 -->
-          <div class="video-card" data-youtube-url="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+          <div class="video-card" data-youtube-url="https://www.youtube.com/watch?v=YQHsXMglC9A">
             <div class="video-thumbnail">
               <img src="assets/images/video-thumbnail-2.png" alt="Success Story 5" />
               <div class="play-button">
@@ -1544,7 +1549,7 @@
           </div>
 
           <!-- Video Card 6 -->
-          <div class="video-card" data-youtube-url="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+          <div class="video-card" data-youtube-url="https://www.youtube.com/watch?v=YQHsXMglC9A">
             <div class="video-thumbnail">
               <img src="assets/images/video-thumbnail-3.png" alt="Success Story 6" />
               <div class="play-button">
@@ -2421,6 +2426,17 @@
     </div>
   </footer>
 
+  <!-- Video Modal -->
+  <div id="videoModalOverlay" class="video-modal-overlay" aria-hidden="true">
+    <div class="video-modal" role="dialog" aria-modal="true" aria-labelledby="videoModalTitle">
+      <button type="button" class="video-modal-close" aria-label="Close video">&times;</button>
+      <div class="video-modal-content">
+        <iframe id="videoIframe" src="" title="Success Story Video" frameborder="0"
+          allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"></script>
@@ -2655,13 +2671,64 @@
       ],
     });
 
-    // Handle YouTube video clicks
-    $(".video-card").on("click", function () {
-      const youtubeUrl = $(this).data("youtube-url");
-      if (youtubeUrl) {
-        window.open(youtubeUrl, "_blank");
+    // Handle YouTube video clicks -> open iframe modal
+    (function () {
+      const overlay = document.getElementById('videoModalOverlay');
+      const iframe = document.getElementById('videoIframe');
+      const closeBtn = document.querySelector('.video-modal-close');
+
+      function toEmbedUrl(url) {
+        try {
+          const u = new URL(url);
+          // youtu.be/<id>
+          if (u.hostname.includes('youtu.be')) {
+            const id = u.pathname.replace('/', '');
+            return `https://www.youtube.com/embed/${id}?autoplay=1&rel=0`;
+          }
+          // www.youtube.com/watch?v=<id>
+          const idParam = u.searchParams.get('v');
+          if (idParam) {
+            return `https://www.youtube.com/embed/${idParam}?autoplay=1&rel=0`;
+          }
+          // Fallback
+          return url;
+        } catch (_) {
+          return url;
+        }
       }
-    });
+
+      function openModal(videoUrl) {
+        iframe.src = toEmbedUrl(videoUrl);
+        overlay.classList.add('active');
+        overlay.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeModal() {
+        overlay.classList.remove('active');
+        overlay.setAttribute('aria-hidden', 'true');
+        // Stop video playback by clearing src
+        iframe.src = '';
+        document.body.style.overflow = '';
+      }
+
+      $(".video-card").on("click", function () {
+        const youtubeUrl = $(this).data("youtube-url");
+        if (youtubeUrl) {
+          openModal(youtubeUrl);
+        }
+      });
+
+      overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) closeModal();
+      });
+      closeBtn.addEventListener('click', closeModal);
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && overlay.classList.contains('active')) {
+          closeModal();
+        }
+      });
+    })();
 
     // Initialize News Carousel
     $(".news-carousel").slick({
@@ -2806,6 +2873,27 @@
       searchIcon.classList.remove("active");
       searchPopup.classList.remove("active");
       searchOverlay.classList.remove("active");
+    });
+
+    const searchBtn = document.getElementById("searchBtnDesktop");
+    const searchInput = document.getElementById("searchInputDesktop");
+    const searchContainer = document.querySelector(".search-container");
+
+    // Toggle search input on button click
+    searchBtn.addEventListener("click", () => {
+      searchInput.classList.toggle("show");
+      if (searchInput.classList.contains("show")) {
+        searchInput.focus();
+      }
+      searchContainer.classList.toggle("show");
+    });
+
+    // Collapse when clicking outside
+    document.addEventListener("click", (event) => {
+      if (!searchContainer.contains(event.target)) {
+        searchInput.classList.remove("show");
+        searchContainer.classList.remove("show");
+      }
     });
   </script>
 </body>
