@@ -1145,7 +1145,7 @@ h5 {
 
 .course-title {
   font-family: "SVN-Gilroy", sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 20px;
   line-height: 1.05;
   color: #252525;
@@ -1832,7 +1832,7 @@ h5 {
 .mobile-menu {
   position: fixed;
   top: 0;
-  left: 100%;
+  right: 100%;
   width: calc(100% - 24px);
   height: 100vh;
   background: #fff;
@@ -1875,7 +1875,7 @@ h5 {
 }
 
 .mobile-menu.active {
-  transform: translateX(-100%);
+  transform: translateX(100%);
 }
 
 .mobile-menu-overlay.active {
@@ -2137,7 +2137,7 @@ h5 {
 .mobile-menu {
   position: fixed;
   top: 0;
-  left: 100%;
+  right: 100%;
   width: calc(100% - 24px);
   height: 100vh;
   background: #fff;
@@ -2180,7 +2180,7 @@ h5 {
 }
 
 .mobile-menu.active {
-  transform: translateX(-100%);
+  transform: translateX(100%);
 }
 
 .mobile-menu-overlay.active {
@@ -2774,6 +2774,7 @@ h5 {
 .news-image {
   padding: 20px 17px 0 17px;
   flex: 1;
+  margin-bottom: 12px;
 }
 
 .news-image img {
@@ -2974,7 +2975,7 @@ h5 {
 
   /* Why Choose section responsive */
   .why-choose-section {
-    padding: 60px 0;
+    padding: 43px 0;
   }
 
   .why-choose-title {
@@ -2982,7 +2983,7 @@ h5 {
   }
 
   .why-choose-title-section {
-    margin-bottom: 60px;
+    margin-bottom: 16px;
   }
 
   .feature-title,
@@ -2996,7 +2997,7 @@ h5 {
 
   /* Teaching Methods section responsive */
   .teaching-methods-section {
-    padding-bottom: 60px;
+    padding-bottom: 16px;
   }
 
   .teaching-methods-title {
@@ -3004,7 +3005,7 @@ h5 {
   }
 
   .teaching-methods-title-section {
-    margin-bottom: 60px;
+    margin-bottom: 16px;
   }
 
   .method-title {
@@ -3028,8 +3029,12 @@ h5 {
     font-size: 32px;
   }
 
+  .teachers-carousel {
+    margin-bottom: 16px
+  }
+
   .teachers-title-section {
-    margin-bottom: 60px;
+    margin-bottom: 16px;
   }
 
   .teacher-card-inner {
@@ -3058,7 +3063,7 @@ h5 {
   }
 
   .success-stories-title-section {
-    margin-bottom: 60px;
+    margin-bottom: 16px;
   }
 
   .video-thumbnail {
@@ -3082,7 +3087,7 @@ h5 {
 
   /* Press section responsive */
   .press-section {
-    padding: 60px 0;
+    padding: 16px 0;
   }
 
   .press-title {
@@ -3105,6 +3110,10 @@ h5 {
 
   .news-title {
     font-size: 16px;
+  }
+
+  .news-carousel {
+    margin-top: 16px;
   }
 }
 
@@ -3260,6 +3269,10 @@ h5 {
 
   .testimonial-content p {
     font-size: 14px;
+  }
+
+  .testimonials-section {
+    padding-bottom: 16px;
   }
 
   .testimonials-section .btn-details {
@@ -4107,6 +4120,10 @@ h5 {
   .contact-text {
     font-size: 14px;
   }
+
+  .accordion-text, .accordion-body {
+    font-size: 13px;
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -4209,6 +4226,7 @@ h5 {
 .accordion-body {
   border-top: 1px dashed #555;
   padding: 12px;
+  font-size: 16px;
 }
 
 .accordion-body strong {
