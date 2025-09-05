@@ -1,36 +1,121 @@
+/* Font Regular */
 @font-face {
   font-family: "SVN-Gilroy";
-  src: url("assets/fonts/SVN-Gilroy-Regular.otf") format("opentype");
+  src: url("assets/SVN-Gilroy/SVN-Gilroy Regular.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "SVN-Gilroy";
-  src: url("assets/fonts/SVN-Gilroy-Medium.otf") format("opentype");
+  src: url("assets/SVN-Gilroy/SVN-Gilroy Italic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* Font Light */
+@font-face {
+  font-family: "SVN-Gilroy";
+  src: url("assets/SVN-Gilroy/SVN-Gilroy Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SVN-Gilroy";
+  src: url("assets/SVN-Gilroy/SVN-Gilroy Light Italic.otf") format("opentype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+/* Font XLight */
+@font-face {
+  font-family: "SVN-Gilroy";
+  src: url("assets/SVN-Gilroy/SVN-Gilroy Xlight.otf") format("opentype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SVN-Gilroy";
+  src: url("assets/SVN-Gilroy/SVN-Gilroy Xlight Italic.otf") format("opentype");
+  font-weight: 200;
+  font-style: italic;
+}
+
+/* Font Medium */
+@font-face {
+  font-family: "SVN-Gilroy";
+  src: url("assets/SVN-Gilroy/SVN-Gilroy Medium.otf") format("opentype");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: "SVN-Gilroy";
-  src: url("assets/fonts/SVN-Gilroy-SemiBold.otf") format("opentype");
+  src: url("assets/SVN-Gilroy/SVN-Gilroy Medium Italic.otf") format("opentype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+/* Font SemiBold */
+@font-face {
+  font-family: "SVN-Gilroy";
+  src: url("assets/SVN-Gilroy/SVN-Gilroy SemiBold.otf") format("opentype");
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
   font-family: "SVN-Gilroy";
-  src: url("assets/fonts/SVN-Gilroy-Bold.otf") format("opentype");
+  src: url("assets/SVN-Gilroy/SVN-Gilroy SemiBold Italic.otf") format("opentype");
+  font-weight: 600;
+  font-style: italic;
+}
+
+/* Font Bold */
+@font-face {
+  font-family: "SVN-Gilroy";
+  src: url("assets/SVN-Gilroy/SVN-Gilroy Bold.otf") format("opentype");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: "SVN-Gilroy";
-  src: url("assets/fonts/SVN-Gilroy-Heavy.otf") format("opentype");
+  src: url("assets/SVN-Gilroy/SVN-Gilroy Bold Italic.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* Font Heavy */
+@font-face {
+  font-family: "SVN-Gilroy";
+  src: url("assets/SVN-Gilroy/SVN-Gilroy Heavy.otf") format("opentype");
   font-weight: 800;
   font-style: normal;
+}
+
+@font-face {
+  font-family: "SVN-Gilroy";
+  src: url("assets/SVN-Gilroy/SVN-Gilroy Heavy Italic.otf") format("opentype");
+  font-weight: 800;
+  font-style: italic;
+}
+
+/* Font Black */
+@font-face {
+  font-family: "SVN-Gilroy";
+  src: url("assets/SVN-Gilroy/SVN-Gilroy Black.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SVN-Gilroy";
+  src: url("assets/SVN-Gilroy/SVN-Gilroy Black Italic.otf") format("opentype");
+  font-weight: 900;
+  font-style: italic;
 }
 
 body {
@@ -1427,11 +1512,53 @@ h5 {
   margin-bottom: 64px;
 }
 
+@media (max-width: 991.98px) {
+  .why-choose-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 0;
+  }
+
+  /* Right column should appear first with its accordion items in original order */
+  .why-choose-grid .feature-cards-column:first-child {
+    order: 1;
+  }
+  
+  /* Left column should appear second with reordered items (0->3, 1->2, 2->1, 3->0) */
+  .why-choose-grid .feature-cards-column:last-child {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .why-choose-grid .feature-cards-column:last-child .accordion-item:nth-child(1) { order: 3; }
+  .why-choose-grid .feature-cards-column:last-child .accordion-item:nth-child(2) { order: 2; }
+  .why-choose-grid .feature-cards-column:last-child .accordion-item:nth-child(3) { order: 1; }
+  .why-choose-grid .feature-cards-column:last-child .accordion-item:nth-child(4) { order: 0; }
+  
+  /* Hero image last */
+  .why-choose-grid .why-choose-hero { order: 3; }
+}
+
 /* Feature Cards Columns */
 .feature-cards-column {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 20px;
+}
+
+@media (max-width: 991.98px) {
+  .feature-cards-column {
+    gap: 12px;
+  }
+  .feature-cards-column + .feature-cards-column {
+    margin-top: 12px !important;
+  }
+
+  .why-choose-grid {
+    gap: 12px !important;
+  }
 }
 
 /* Regular Feature Cards */
@@ -1445,6 +1572,89 @@ h5 {
   gap: 12px;
   min-height: 68px;
 } */
+
+/* Fix Accordion Border Radius */
+.accordion-item:first-of-type .accordion-button {
+  border-top-left-radius: 12px !important;
+  border-top-right-radius: 12px !important;
+}
+
+.accordion-item:first-of-type {
+  border-top-left-radius: 12px !important;
+  border-top-right-radius: 12px !important;
+}
+
+.accordion-item:last-of-type .accordion-button.collapsed {
+  border-bottom-left-radius: 12px !important;
+  border-bottom-right-radius: 12px !important;
+}
+
+.accordion-item:last-of-type {
+  border-bottom-left-radius: 12px !important;
+  border-bottom-right-radius: 12px !important;
+}
+
+.accordion-item .accordion-button {
+  border-radius: 12px !important;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.accordion-button .accordion-icon {
+  display: flex;
+  align-items: center;
+  margin-right: 16px;
+}
+
+.accordion-button .accordion-text {
+  margin: 0;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.accordion-button::after {
+  position: absolute !important;
+  right: 20px !important;
+  bottom: 20px !important;
+  margin: 0 !important;
+  transform-origin: center !important;
+}
+
+.accordion-button.collapsed::after {
+  transform: rotate(0deg) !important;
+}
+
+.accordion-button:not(.collapsed)::after {
+  transform: rotate(180deg) !important;
+}
+
+@media (max-width: 991.98px) {
+  .accordion-button {
+    padding: 8px 7px !important;
+  }
+  
+  .accordion-button .accordion-text {
+    font-size: 13px;
+  }
+
+  .accordion-button::after {
+    position: absolute !important;
+    right: 7px !important;
+    bottom: 5px !important;
+    margin: 0 !important;
+  }
+
+  .accordion-item {
+    margin-bottom: 0 !important;
+  }
+
+  .accordion-item:last-child {
+    margin-bottom: 0;
+  }
+}
 
 .feature-icon {
   width: 44px;
@@ -1539,6 +1749,20 @@ h5 {
   height: auto;
   max-width: 371px;
   object-fit: cover;
+}
+
+@media (max-width: 991.98px) {
+  .hero-image {
+    max-width: 100%;
+    margin: 20px 0;
+  }
+  
+  .why-choose-hero {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
 }
 
 /* Registration CTA */
@@ -4171,7 +4395,6 @@ h5 {
   box-shadow: none;
   display: flex;
   align-items: center;
-  gap: 12px;
 }
 
 .accordion-button::after {
@@ -4201,6 +4424,17 @@ h5 {
   font-size: 16px;
   color: #d62828;
   margin-right: 12px;
+}
+
+@media (max-width: 991.98px) {
+  .feature-cards-column .accordion-icon {
+    width: 28px;
+    height: 28px;
+  }
+  .feature-cards-column .accordion-icon svg {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 /* Icon fill colors - red when collapsed, white when expanded */
