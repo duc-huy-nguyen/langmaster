@@ -1599,7 +1599,7 @@ h5 {
   position: relative;
   display: flex;
   align-items: center;
-  padding: 20px;
+  padding: 12px;
 }
 
 .accordion-button .accordion-icon {
