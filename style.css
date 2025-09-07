@@ -1141,6 +1141,7 @@ h5 {
   align-items: center;
   width: 100%;
   border-radius: 20px;
+  border: 1px solid transparent; /* Reserve space to avoid jump when active border appears */
   background: #ffffff;
 }
 
@@ -1279,18 +1280,25 @@ h5 {
 .course-benefits {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease;
+  opacity: 0;
+  transition: max-height 0.35s ease, padding 0.35s ease, opacity 0.25s ease;
   background: #fff2f2;
   width: 100%;
   border-radius: 8px;
+  padding: 0 45px; /* animate vertical padding; keep horizontal to avoid width shift */
+  will-change: max-height, padding, opacity;
 }
 
 .course-benefits.expanded {
   max-height: 1000px;
   padding: 45px;
+  opacity: 1;
 }
 
 @media (max-width: 991.98px) {
+  .course-benefits {
+    padding: 0 24px;
+  }
   .course-benefits.expanded {
     padding: 24px;
   }

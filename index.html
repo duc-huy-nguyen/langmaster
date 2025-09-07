@@ -389,7 +389,7 @@
             <!-- Course Types Grid -->
             <div class="course-types-grid">
               <div class="course-type-card" data-course="communication">
-                <div class="course-card-header course-active">
+                <div class="course-card-header course-active" onclick="toggleCourseCard(this)" style="cursor: pointer;">
                   <div class="course-arrow"></div>
                   <div class="course-icon"></div>
                   <h4 class="course-title">
@@ -2503,27 +2503,16 @@
       const courseCards = document.querySelectorAll(".course-type-card");
 
       courseCards.forEach((card) => {
-        card.addEventListener("click", function () {
-          // Remove active class from all cards
-          courseCards.forEach((c) => {
-            c.classList.remove("course-active");
-            const benefits = c.querySelector(".course-benefits");
-            if (benefits) {
-              benefits.classList.remove("expanded");
-            }
-          });
-
-          // Add active class to clicked card
-          this.classList.add("course-active");
-
-          // Show/create benefits for this card
-          let benefits = this.querySelector(".course-benefits");
-          if (!benefits) {
-            // Create benefits section if it doesn't exist
-            benefits = createBenefitsSection();
-            this.appendChild(benefits);
+        card.addEventListener("click", function (e) {
+          const header = this.querySelector('.course-card-header');
+          // If the click originated on the header, let the header handler do the work
+          if (header && header.contains(e.target)) {
+            return; // avoid double-handling which re-adds classes
           }
-          benefits.classList.add("expanded");
+          // Otherwise, behave like clicking the header
+          if (typeof toggleCourseCard === 'function' && header) {
+            toggleCourseCard(header);
+          }
         });
       });
 
@@ -2893,6 +2882,47 @@
         searchInput.classList.remove("show");
         searchContainer.classList.remove("show");
       }
+    });
+  </script>
+  <script>
+    // Toggle a course card: clicking an open card closes it; clicking a closed card opens it and closes others
+  function toggleCourseCard(headerEl) {
+      try {
+        const card = headerEl.closest('.course-type-card');
+        if (!card) return;
+
+        const benefits = card.querySelector('.course-benefits');
+        const isExpanded = (benefits && benefits.classList.contains('expanded')) || headerEl.classList.contains('course-active');
+
+        if (isExpanded) {
+          // Close this card only
+          if (benefits) benefits.classList.remove('expanded');
+          headerEl.classList.remove('course-active');
+          card.classList.remove('course-active');
+        } else {
+          // Close others first (accordion behavior)
+          document.querySelectorAll('.course-type-card .course-benefits.expanded').forEach((b) => b.classList.remove('expanded'));
+          document.querySelectorAll('.course-type-card .course-card-header.course-active').forEach((h) => h.classList.remove('course-active'));
+          document.querySelectorAll('.course-type-card.course-active').forEach((c) => c.classList.remove('course-active'));
+
+          // Open this card
+          if (benefits) benefits.classList.add('expanded');
+          headerEl.classList.add('course-active');
+          card.classList.add('course-active');
+        }
+      } catch (e) {
+        console.error('toggleCourseCard error:', e);
+      }
+    }
+
+    // Attach click listeners for headers that don't have inline onclick
+    document.addEventListener('DOMContentLoaded', function () {
+      document.querySelectorAll('.course-card-header').forEach(function (header) {
+        if (!header.hasAttribute('onclick')) {
+          if (!header.style.cursor) header.style.cursor = 'pointer';
+          header.addEventListener('click', function () { toggleCourseCard(header); });
+        }
+      });
     });
   </script>
 </body>
